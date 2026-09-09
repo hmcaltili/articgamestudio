@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Frame Agent Privacy Policy — Artic Game Studio. No data is collected, stored or shared." />
+  <title>Privacy Policy — Frame Agent | Artic Game Studio</title>
+  <link rel="icon" type="image/svg+xml" href="logo.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+  <style>
+    .legal-page { padding: 9rem 0 6rem; min-height: 100vh; }
+    .legal-header { margin-bottom: 3rem; }
+    .legal-header h1 {
+      font-family: var(--font-display); font-size: clamp(2rem, 5vw, 3rem);
+      font-weight: 800; letter-spacing: -0.02em; margin-bottom: 0.5rem;
+    }
+    .legal-header p { color: var(--text-muted); font-size: 0.88rem; }
+    .legal-body {
+      background: var(--bg-glass);
+      border: 1px solid var(--bg-glass-border);
+      border-radius: var(--radius-lg);
+      padding: clamp(1.75rem, 4vw, 3rem);
+      display: flex; flex-direction: column; gap: 0;
+    }
+    .legal-section {
+      padding: 1.75rem 0;
+      border-bottom: 1px solid var(--bg-glass-border);
+    }
+    .legal-section:first-child { padding-top: 0; }
+    .legal-section:last-child { padding-bottom: 0; border-bottom: none; }
+    .legal-section h2 {
+      font-family: var(--font-display); font-size: 1.1rem; font-weight: 700;
+      margin-bottom: 0.85rem; color: var(--text-primary);
+      display: flex; align-items: center; gap: 0.6rem;
+    }
+    .legal-section h2 .section-num {
+      display: inline-flex; align-items: center; justify-content: center;
+      width: 28px; height: 28px; flex-shrink: 0;
+      background: rgba(124,58,237,0.14);
+      border: 1px solid rgba(124,58,237,0.28);
+      border-radius: 8px;
+      font-size: 0.75rem; color: var(--purple-400); font-weight: 800;
+    }
+    .legal-section p, .legal-section ul {
+      color: var(--text-secondary); font-size: 0.93rem; line-height: 1.8;
+    }
+    .legal-section p + p { margin-top: 0.75rem; }
+    .legal-section ul { padding-left: 1.4rem; display: flex; flex-direction: column; gap: 0.5rem; margin-top: 0.5rem; }
+    .legal-section li::marker { color: var(--purple-400); }
+    .legal-section strong { color: var(--text-primary); font-weight: 700; }
+    .contact-detail-list { list-style: none !important; padding-left: 0 !important; }
+    .contact-detail-list li {
+      display: flex; align-items: flex-start; gap: 0.6rem;
+      padding: 0.45rem 0.75rem;
+      background: rgba(255,255,255,0.03);
+      border-radius: 8px; margin-bottom: 0.4rem;
+    }
+    .contact-detail-list li span.label {
+      color: var(--text-muted); font-size: 0.82rem; min-width: 180px; flex-shrink: 0;
+    }
+    .contact-detail-list li span.value {
+      color: var(--text-secondary); font-size: 0.88rem; word-break: break-all;
+    }
+    .legal-link { color: var(--purple-400); transition: color 0.2s; }
+    .legal-link:hover { color: var(--purple-500); }
+    .back-link {
+      display: inline-flex; align-items: center; gap: 8px;
+      color: var(--purple-400); font-size: 0.88rem; font-weight: 600;
+      margin-bottom: 2.5rem; transition: gap 0.2s ease;
+    }
+    .back-link:hover { gap: 12px; }
+    .intro-block {
+      background: rgba(124,58,237,0.07);
+      border: 1px solid rgba(124,58,237,0.18);
+      border-radius: var(--radius-md);
+      padding: 1.25rem 1.5rem;
+      color: var(--text-secondary); font-size: 0.92rem; line-height: 1.8;
+      margin-bottom: 1.5rem;
+    }
+    .game-badge {
+      display: inline-flex; align-items: center; gap: 0.5rem;
+      background: rgba(124,58,237,0.12);
+      border: 1px solid rgba(124,58,237,0.25);
+      border-radius: var(--radius-full);
+      padding: 0.35rem 1rem;
+      font-size: 0.8rem; font-weight: 700; color: var(--purple-400);
+      margin-bottom: 1rem;
+      letter-spacing: 0.04em;
+    }
+    .platform-badges { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-top: 0.75rem; }
+    .platform-badge {
+      display: inline-flex; align-items: center; gap: 0.4rem;
+      background: rgba(255,255,255,0.05);
+      border: 1px solid var(--bg-glass-border);
+      border-radius: 8px;
+      padding: 0.3rem 0.75rem;
+      font-size: 0.78rem; font-weight: 600; color: var(--text-muted);
+    }
+  </style>
+</head>
+<body class="loaded">
+<div class="noise-overlay" aria-hidden="true"></div>
+
+<nav class="nav scrolled" role="navigation" aria-label="Main navigation">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo" aria-label="Artic Game Studio">
+      <img src="logo.svg" alt="Artic Game Studio Logo" class="nav-logo-img" />
+      <span class="nav-logo-text">Artic Game Studio</span>
+    </a>
+    <div class="nav-center">
+      <a href="privacy.html" class="nav-link" id="nav-priv">Privacy Policy</a>
+      <a href="terms.html" class="nav-link" id="nav-terms">Terms of Service</a>
+      <a href="index.html#contact" class="nav-link" id="nav-contact">Contact</a>
+    </div>
+  </div>
+</nav>
+
+<main class="legal-page">
+  <div class="container">
+    <a href="privacy.html" class="back-link">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M19 12H5M12 19l-7-7 7-7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      Back to Privacy Policy
+    </a>
+    <div class="legal-header">
+      <div class="game-badge">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="6" width="20" height="12" rx="3"/><path d="M8 12h.01M12 12h.01M16 12h.01"/></svg>
+        Frame Agent
+      </div>
+      <div class="section-tag">Legal</div>
+      <h1>Privacy <span class="gradient-text">Policy</span></h1>
+      <div class="platform-badges">
+        <span class="platform-badge">
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M17.05 20.28c-.98.95-2.05.8-3.08.35-1.09-.46-2.09-.48-3.24 0-1.44.62-2.2.44-3.06-.35C2.79 15.25 3.51 7.7 9.05 7.4c1.29.08 2.18.75 2.94.8 1.12-.22 2.19-.93 3.38-.84 1.43.1 2.51.66 3.22 1.66-2.93 1.68-2.43 5.5.5 6.5-.5 1.3-1.08 2.6-2.04 3.76zM12.03 7.25c-.16-2.63 2.1-4.9 4.7-5 .3 2.83-2.5 5.3-4.7 5z"/></svg>
+          App Store
+        </span>
+        <span class="platform-badge">
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M3.18 23.76c.35.19.77.19 1.15-.01l11.35-6.56-2.48-2.48-10.02 9.05zM.27 1.24C.1 1.57 0 1.95 0 2.38v19.24c0 .43.1.81.27 1.14l.07.07 10.78-10.78v-.26L.34 1.17l-.07.07zM20.48 10.31l-2.61-1.51-2.77 2.77 2.77 2.77 2.63-1.52c.75-.43.75-1.13-.02-1.51zM4.33.25L15.68 6.81l-2.48 2.48L3.18.24c.38-.21.8-.21 1.15.01z"/></svg>
+          Google Play
+        </span>
+      </div>
+      <p style="margin-top:0.75rem;">Last updated: 7 September 2026 &nbsp;&middot;&nbsp; Developer: Artic Game Studio (Hamza Mucahit Caltili)</p>
+    </div>
+
+    <div class="intro-block">
+      <strong>Frame Agent does not collect, store or share any personal data.</strong>
+      <br /><br />
+      The game runs entirely on your device. It requires no internet connection, no account, shows no advertisements, and sends no data to any server.
+    </div>
+
+    <div class="legal-body">
+
+      <div class="legal-section">
+        <h2><span class="section-num">1</span>Data We Do Not Collect</h2>
+        <p>This application collects <strong>none</strong> of the following:</p>
+        <ul>
+          <li>Name, email address or other personal identifiers</li>
+          <li>Location data</li>
+          <li>Device identifiers or advertising ID</li>
+          <li>Contacts, photos, camera or microphone data</li>
+          <li>Usage analytics, crash reports or behavioural data</li>
+          <li>IP address or network information</li>
+        </ul>
+        <p style="margin-top:0.75rem;">The application requests <strong>no device permissions</strong>.</p>
+      </div>
+
+      <div class="legal-section">
+        <h2><span class="section-num">2</span>Information Stored on Your Device</h2>
+        <p>To save your progress, some information is kept <strong>only in your device's local storage</strong>:</p>
+        <ul>
+          <li>Your current level and completed paintings</li>
+          <li>In-game gold and booster counts</li>
+          <li>Sound, haptics and language preferences</li>
+          <li>Quiz scores</li>
+        </ul>
+        <p style="margin-top:0.75rem;">This information <strong>never leaves your device</strong>. It does not reach us or any third party. It is deleted completely when you uninstall the app or clear its data.</p>
+      </div>
+
+      <div class="legal-section">
+        <h2><span class="section-num">3</span>Third-Party Services</h2>
+        <p>The application uses <strong>no third-party services</strong>. There is no advertising network, analytics tool, social media integration or cloud service.</p>
+        <p>There are <strong>no in-app purchases</strong>.</p>
+      </div>
+
+      <div class="legal-section">
+        <h2><span class="section-num">4</span>Device Features</h2>
+        <p>The application optionally uses two device features:</p>
+        <ul>
+          <li><strong>Vibration</strong> — For in-game feedback. Can be turned off in Settings. Collects no data.</li>
+          <li><strong>Sharing</strong> — Opens your device's own share sheet only when you press a share button. You decide what to share; the app does not store or transmit that content.</li>
+        </ul>
+      </div>
+
+      <div class="legal-section">
+        <h2><span class="section-num">5</span>Children's Privacy</h2>
+        <p>Because the application collects no data from anyone, it collects no data from children either. No information is knowingly or unknowingly obtained from users under 13.</p>
+      </div>
+
+      <div class="legal-section">
+        <h2><span class="section-num">6</span>Your Rights</h2>
+        <p>Since we collect no personal data, there is nothing to request deletion, correction or portability of — we hold no data about you.</p>
+        <p>You can delete your locally stored progress at any time: through <strong>Settings &rarr; Reset progress</strong> inside the app, or by clearing the app's data in your device settings.</p>
+      </div>
+
+      <div class="legal-section">
+        <h2><span class="section-num">7</span>Changes</h2>
+        <p>If this policy changes, the updated version will be published on this page and the date above will be revised. If a feature that collects data is ever added, the change will be announced here before the app update.</p>
+      </div>
+
+      <div class="legal-section">
+        <h2><span class="section-num">8</span>Contact</h2>
+        <ul class="contact-detail-list">
+          <li>
+            <span class="label">Official Support Email</span>
+            <span class="value"><a href="mailto:contact@articgamestudio.com" class="legal-link">contact@articgamestudio.com</a></span>
+          </li>
+          <li>
+            <span class="label">Studio</span>
+            <span class="value">Artic Game Studio &mdash; Uskudar, Istanbul, Turkiye</span>
+          </li>
+          <li>
+            <span class="label">Developer</span>
+            <span class="value">Hamza Mucahit Caltili</span>
+          </li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+</main>
+
+<footer class="footer" role="contentinfo">
+  <div class="container">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <img src="logo.svg" alt="" class="footer-logo-img" aria-hidden="true" />
+        <span>&copy; 2026 Artic Game Studio. All rights reserved.</span>
+      </div>
+      <div class="footer-links">
+        <a href="privacy.html" id="gpsa-footer-privacy">Privacy Policy</a>
+        <a href="terms.html" id="gpsa-footer-terms">Terms of Service</a>
+        <a href="index.html#contact" id="gpsa-footer-contact">Contact</a>
+      </div>
+    </div>
+  </div>
+</footer>
+</body>
+</html>

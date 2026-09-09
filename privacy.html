@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Artic Game Studio Privacy Policy — Choose your platform to view the relevant privacy policy." />
+  <title>Privacy Policy — Artic Game Studio</title>
+  <link rel="icon" type="image/svg+xml" href="logo.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+  <style>
+    /* ---- Page shell ---- */
+    .privacy-hub { padding: 9rem 0 6rem; min-height: 100vh; }
+    .privacy-hub-header { margin-bottom: 3.5rem; }
+    .privacy-hub-header h1 {
+      font-family: var(--font-display); font-size: clamp(2rem, 5vw, 3rem);
+      font-weight: 800; letter-spacing: -0.02em; margin-bottom: 0.5rem;
+    }
+    .privacy-hub-header p { color: var(--text-muted); font-size: 0.9rem; max-width: 520px; line-height: 1.7; }
+
+    /* ---- Platform card grid ---- */
+    .platform-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.25rem;
+    }
+
+    /* ---- Individual card ---- */
+    .platform-card {
+      position: relative; overflow: hidden;
+      display: flex; flex-direction: column; gap: 1rem;
+      background: var(--bg-glass);
+      border: 1px solid var(--bg-glass-border);
+      border-radius: var(--radius-lg);
+      padding: 2rem 2rem 1.75rem;
+      transition: border-color 0.25s ease, transform 0.25s ease, box-shadow 0.25s ease;
+      text-decoration: none; color: inherit;
+    }
+    .platform-card:hover {
+      border-color: rgba(167,139,250,0.4);
+      transform: translateY(-4px);
+      box-shadow: 0 20px 50px rgba(124,58,237,0.12);
+    }
+    .platform-card::before {
+      content: '';
+      position: absolute; inset: 0;
+      background: radial-gradient(ellipse at 20% 20%, rgba(124,58,237,0.08) 0%, transparent 65%);
+      opacity: 0; transition: opacity 0.3s ease;
+    }
+    .platform-card:hover::before { opacity: 1; }
+
+    .card-icon {
+      width: 52px; height: 52px; border-radius: 14px;
+      display: flex; align-items: center; justify-content: center;
+      background: rgba(124,58,237,0.12);
+      border: 1px solid rgba(124,58,237,0.22);
+      flex-shrink: 0;
+    }
+    .card-icon svg { width: 26px; height: 26px; }
+
+    .card-title {
+      font-family: var(--font-display); font-size: 1.15rem;
+      font-weight: 800; color: var(--text-primary); margin-bottom: 0.3rem;
+    }
+    .card-desc {
+      font-size: 0.88rem; color: var(--text-secondary); line-height: 1.65;
+    }
+    .card-body { flex: 1; }
+
+    .card-cta {
+      display: inline-flex; align-items: center; gap: 6px;
+      font-size: 0.85rem; font-weight: 700; color: var(--purple-400);
+      margin-top: 0.25rem;
+      transition: gap 0.2s ease;
+    }
+    .platform-card:hover .card-cta { gap: 10px; }
+
+    /* TikTok card accent */
+    .card-tiktok .card-icon { background: rgba(0,0,0,0.25); border-color: rgba(255,255,255,0.1); }
+    .card-tiktok:hover { border-color: rgba(105,201,208,0.4); box-shadow: 0 20px 50px rgba(105,201,208,0.08); }
+    .card-tiktok .card-cta { color: #69c9d0; }
+
+    /* GP card accent */
+    .card-gplay .card-icon { background: rgba(52,168,83,0.1); border-color: rgba(52,168,83,0.22); }
+    .card-gplay:hover { border-color: rgba(52,168,83,0.38); box-shadow: 0 20px 50px rgba(52,168,83,0.07); }
+    .card-gplay .card-cta { color: #34a853; }
+
+    /* App Store card accent */
+    .card-appstore .card-icon { background: rgba(0,122,255,0.1); border-color: rgba(0,122,255,0.22); }
+    .card-appstore:hover { border-color: rgba(0,122,255,0.38); box-shadow: 0 20px 50px rgba(0,122,255,0.07); }
+    .card-appstore .card-cta { color: #007aff; }
+
+    /* game tag pill */
+    .game-pill {
+      display: inline-flex; align-items: center; gap: 0.4rem;
+      background: rgba(255,255,255,0.05);
+      border: 1px solid var(--bg-glass-border);
+      border-radius: var(--radius-full);
+      padding: 0.2rem 0.65rem;
+      font-size: 0.72rem; font-weight: 700;
+      color: var(--text-muted); letter-spacing: 0.03em;
+    }
+  </style>
+</head>
+<body class="loaded">
+<div class="noise-overlay" aria-hidden="true"></div>
+
+<nav class="nav scrolled" role="navigation" aria-label="Main navigation">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo" aria-label="Artic Game Studio">
+      <img src="logo.svg" alt="Artic Game Studio Logo" class="nav-logo-img" />
+      <span class="nav-logo-text">Artic Game Studio</span>
+    </a>
+    <div class="nav-center">
+      <a href="privacy.html" class="nav-link" id="nav-priv">Privacy Policy</a>
+      <a href="terms.html" class="nav-link" id="nav-terms">Terms of Service</a>
+      <a href="index.html#contact" class="nav-link" id="nav-contact">Contact</a>
+    </div>
+  </div>
+</nav>
+
+<main class="privacy-hub">
+  <div class="container">
+    <div class="privacy-hub-header">
+      <div class="section-tag">Legal</div>
+      <h1>Privacy <span class="gradient-text">Policy</span></h1>
+      <p>Select the platform you are playing on to read the privacy policy that applies to you.</p>
+    </div>
+
+    <div class="platform-grid">
+
+      <!-- TikTok Mini Games -->
+      <a href="privacy-tiktok.html" class="platform-card card-tiktok" id="platform-tiktok">
+        <div class="card-icon">
+          <!-- TikTok logo -->
+          <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M27.2 13.52a10.84 10.84 0 01-6.34-2.04v9.3a8.68 8.68 0 11-7.46-8.59v4.78a3.97 3.97 0 103.86 3.81V4h4.48c.4 2.83 2.65 5.06 5.46 5.41v4.11z" fill="#ffffff"/>
+            <path d="M21.6 20.78a8.68 8.68 0 11-7.46-8.59v4.78a3.97 3.97 0 103.86 3.81V4h4.48c.13.9.37 1.77.74 2.58A10.84 10.84 0 0027.2 8.6v4.92a10.84 10.84 0 01-5.6-2.72v9.98z" fill="#69C9D0" opacity="0.7"/>
+          </svg>
+        </div>
+        <div class="card-body">
+          <div class="card-title">TikTok Mini Games</div>
+          <p class="card-desc">For all games published on the TikTok Mini Games platform. Covers data collected via TikTok OpenID, ad SDKs, and session analytics.</p>
+        </div>
+        <div class="card-cta">
+          Read policy
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M12 5l7 7-7 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </div>
+      </a>
+
+      <!-- Google Play Store -->
+      <a href="gpsandasprivacy.html" class="platform-card card-gplay" id="platform-googleplay">
+        <div class="card-icon">
+          <!-- Google Play triangle -->
+          <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M4 2.33L18.97 16 4 29.67V2.33z" fill="#34A853"/>
+            <path d="M4 2.33l15.93 9.2L24.4 7.2 7.67 1.2A3 3 0 004 2.33z" fill="#FBBC04"/>
+            <path d="M4 29.67L19.93 20.5l-4.5-4.5L4 29.67z" fill="#EA4335"/>
+            <path d="M24.4 24.8l-4.47-8.8 4.47-8.8C26.1 9.08 27 10.5 27 12s-.9 2.92-2.6 3.8v9z" fill="#4285F4"/>
+          </svg>
+        </div>
+        <div class="card-body">
+          <div class="card-title">Google Play Store</div>
+          <div style="margin-bottom:0.6rem;"><span class="game-pill">Frame Agent</span></div>
+          <p class="card-desc">For Frame Agent on Android. This app collects no personal data — everything stays on your device.</p>
+        </div>
+        <div class="card-cta" style="color:#34a853">
+          Read policy
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M12 5l7 7-7 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </div>
+      </a>
+
+      <!-- App Store -->
+      <a href="gpsandasprivacy.html" class="platform-card card-appstore" id="platform-appstore">
+        <div class="card-icon">
+          <!-- Apple logo -->
+          <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M22.74 26.9c-1.3 1.27-2.73 1.07-4.1.47-1.45-.62-2.79-.64-4.32 0-1.92.83-2.93.59-4.08-.47C3.72 20.33 4.68 10.27 12.07 9.87c1.72.1 2.9 1 3.92 1.07 1.49-.3 2.92-1.24 4.5-1.12 1.91.13 3.35.88 4.3 2.21-3.9 2.25-3.24 7.34.67 8.68-.67 1.73-1.44 3.47-2.72 5.19zM16.04 9.67C15.82 6.14 18.8 3.2 22.27 3c.4 3.77-3.33 7.07-6.23 6.67z" fill="#007AFF"/>
+          </svg>
+        </div>
+        <div class="card-body">
+          <div class="card-title">App Store</div>
+          <div style="margin-bottom:0.6rem;"><span class="game-pill">Frame Agent</span></div>
+          <p class="card-desc">For Frame Agent on iOS. This app collects no personal data — everything stays on your device.</p>
+        </div>
+        <div class="card-cta" style="color:#007aff">
+          Read policy
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M12 5l7 7-7 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </div>
+      </a>
+
+    </div>
+  </div>
+</main>
+
+<footer class="footer" role="contentinfo">
+  <div class="container">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <img src="logo.svg" alt="" class="footer-logo-img" aria-hidden="true" />
+        <span>&copy; 2026 Artic Game Studio. All rights reserved.</span>
+      </div>
+      <div class="footer-links">
+        <a href="privacy.html" id="priv-privacy">Privacy Policy</a>
+        <a href="terms.html" id="priv-terms">Terms of Service</a>
+        <a href="index.html#contact" id="priv-contact">Contact</a>
+      </div>
+    </div>
+  </div>
+</footer>
+</body>
+</html>

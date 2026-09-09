@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+  <meta name="description" content="Artic Game Studio — Mobile gaming studio. Get in touch with us." />
+  <meta name="theme-color" content="#0a0a0f" />
+  <title>Artic Game Studio</title>
+  <link rel="icon" type="image/svg+xml" href="logo.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+<div class="noise-overlay" aria-hidden="true"></div>
+<div class="custom-cursor" id="cursor" aria-hidden="true"></div>
+<div class="custom-cursor-follower" id="cursorFollower" aria-hidden="true"></div>
+
+<!-- NAV -->
+<nav class="nav" id="nav" role="navigation" aria-label="Main navigation">
+  <div class="nav-inner">
+    <a href="#" class="nav-logo" aria-label="Artic Game Studio">
+      <img src="logo.svg" alt="Artic Game Studio Logo" class="nav-logo-img" />
+      <span class="nav-logo-text">Artic Game Studio</span>
+    </a>
+    <div class="nav-center">
+      <a href="privacy.html" class="nav-link" id="nav-privacy-link">Privacy Policy</a>
+      <a href="terms.html" class="nav-link" id="nav-terms-link">Terms of Service</a>
+      <a href="#contact" class="nav-link" id="nav-contact-link">Contact</a>
+    </div>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero" id="hero" aria-label="Hero">
+  <div class="hero-bg" aria-hidden="true">
+    <div class="orb orb-1"></div>
+    <div class="orb orb-2"></div>
+    <div class="grid-lines"></div>
+  </div>
+  <div class="hero-content">
+
+    <h1 class="hero-title" id="hero-title">
+      <span class="line">Artic</span>
+      <span class="line gradient-text">Game</span>
+      <span class="line">Studio.</span>
+    </h1>
+    <p class="hero-desc" id="hero-desc">
+      We are building something extraordinary. Stay tuned for our upcoming games and announcements.
+    </p>
+    <div class="hero-actions" id="hero-actions">
+      <a href="#contact" class="btn-primary" id="hero-contact-btn">
+        <span>Get in Touch</span>
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 12H19M12 5l7 7-7 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="contact-section" id="contact" aria-label="Contact">
+  <div class="container">
+    <div class="contact-glass reveal">
+      <div class="contact-left">
+        <div class="section-tag">Get in Touch</div>
+        <h2 class="section-title">Say <span class="gradient-text">Hello</span></h2>
+        <p class="contact-desc">
+          Whether you're interested in partnerships, press, or just want to say hi — we'd love to hear from you.
+        </p>
+        <div class="contact-info">
+          <a class="contact-item" href="mailto:contact@articgamestudio.com" id="contact-email">
+            <span class="contact-icon" aria-hidden="true">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><rect x="2" y="4" width="20" height="16" rx="3" stroke="currentColor" stroke-width="1.5"/><path d="M2 8l10 6 10-6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+            </span>
+            contact@articgamestudio.com
+          </a>
+
+        </div>
+        <div class="social-links">
+          <a href="#" class="social-btn" id="social-twitter" aria-label="X / Twitter">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+          </a>
+          <a href="#" class="social-btn" id="social-instagram" aria-label="Instagram">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
+          </a>
+          <a href="#" class="social-btn" id="social-linkedin" aria-label="LinkedIn">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M6.5 8a1.5 1.5 0 100-3 1.5 1.5 0 000 3zM5 10h3v9H5v-9zm5.5 0H13v1.3c.4-.7 1.4-1.5 3-1.5 3.2 0 3.5 2.1 3.5 4.8V19h-3v-4c0-1-.4-2.5-2-2.5-1.8 0-2 1.4-2 2.4V19h-3v-9z"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <form class="contact-form" id="contactForm" novalidate>
+        <div class="form-group">
+          <label for="form-name">Name</label>
+          <input type="text" id="form-name" name="name" placeholder="Your name" autocomplete="name" required />
+        </div>
+        <div class="form-group">
+          <label for="form-email">Email</label>
+          <input type="email" id="form-email" name="email" placeholder="your@email.com" autocomplete="email" required />
+        </div>
+        <div class="form-group">
+          <label for="form-subject">Subject</label>
+          <select id="form-subject" name="subject" required>
+            <option value="">Select a topic</option>
+            <option value="partnership">Partnership</option>
+            <option value="press">Press & Media</option>
+            <option value="careers">Careers</option>
+            <option value="other">Other</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="form-message">Message</label>
+          <textarea id="form-message" name="message" rows="4" placeholder="Your message..." required></textarea>
+        </div>
+        <button type="submit" class="btn-primary form-submit" id="form-submit-btn">
+          <span>Send Message</span>
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M22 2L11 13M22 2L15 22l-4-9-9-4 20-7z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+        <div class="form-success" id="formSuccess" aria-live="polite" role="status">
+          ✅ Message sent! We'll get back to you shortly.
+        </div>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer" role="contentinfo">
+  <div class="container">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <img src="logo.svg" alt="" class="footer-logo-img" aria-hidden="true" />
+        <span>© 2026 Artic Game Studio. All rights reserved.</span>
+      </div>
+      <div class="footer-links">
+        <a href="privacy.html" id="footer-privacy">Privacy Policy</a>
+        <a href="terms.html" id="footer-terms">Terms of Service</a>
+        <a href="#contact" id="footer-contact">Contact</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="app.js"></script>
+</body>
+</html>
