@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Artic Game Studio Terms of Service — Rules and conditions for playing our TikTok Mini Games." />
+  <meta name="description" content="Artic Game Studio Terms of Service — Choose your platform to view the relevant terms." />
   <title>Terms of Service — Artic Game Studio</title>
   <link rel="icon" type="image/svg+xml" href="logo.svg" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -11,82 +11,79 @@
   <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="styles.css" />
   <style>
-    .legal-page { padding: 9rem 0 6rem; min-height: 100vh; }
-    .legal-header { margin-bottom: 3rem; }
-    .legal-header h1 {
+    .privacy-hub { padding: 9rem 0 6rem; min-height: 100vh; }
+    .privacy-hub-header { margin-bottom: 3.5rem; }
+    .privacy-hub-header h1 {
       font-family: var(--font-display); font-size: clamp(2rem, 5vw, 3rem);
       font-weight: 800; letter-spacing: -0.02em; margin-bottom: 0.5rem;
     }
-    .legal-header p { color: var(--text-muted); font-size: 0.88rem; }
-    .legal-body {
+    .privacy-hub-header p { color: var(--text-muted); font-size: 0.9rem; max-width: 520px; line-height: 1.7; }
+
+    .platform-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 1.25rem;
+      max-width: 760px;
+    }
+
+    .platform-card {
+      position: relative; overflow: hidden;
+      display: flex; flex-direction: column; gap: 1rem;
       background: var(--bg-glass);
       border: 1px solid var(--bg-glass-border);
       border-radius: var(--radius-lg);
-      padding: clamp(1.75rem, 4vw, 3rem);
-      display: flex; flex-direction: column; gap: 0;
+      padding: 2rem 2rem 1.75rem;
+      transition: border-color 0.25s ease, transform 0.25s ease, box-shadow 0.25s ease;
+      text-decoration: none; color: inherit;
     }
-    .legal-section {
-      padding: 1.75rem 0;
-      border-bottom: 1px solid var(--bg-glass-border);
+    .platform-card:hover { transform: translateY(-4px); }
+    .platform-card::before {
+      content: '';
+      position: absolute; inset: 0;
+      background: radial-gradient(ellipse at 20% 20%, rgba(124,58,237,0.08) 0%, transparent 65%);
+      opacity: 0; transition: opacity 0.3s ease;
     }
-    .legal-section:first-child { padding-top: 0; }
-    .legal-section:last-child { padding-bottom: 0; border-bottom: none; }
-    .legal-section h2 {
-      font-family: var(--font-display); font-size: 1.1rem; font-weight: 700;
-      margin-bottom: 0.85rem; color: var(--text-primary);
-      display: flex; align-items: center; gap: 0.6rem;
+    .platform-card:hover::before { opacity: 1; }
+
+    .card-icon {
+      width: 54px; height: 54px; border-radius: 14px;
+      display: flex; align-items: center; justify-content: center;
+      flex-shrink: 0;
     }
-    .legal-section h2 .section-num {
-      display: inline-flex; align-items: center; justify-content: center;
-      width: 28px; height: 28px; flex-shrink: 0;
-      background: rgba(124,58,237,0.14);
-      border: 1px solid rgba(124,58,237,0.28);
-      border-radius: 8px;
-      font-size: 0.75rem; color: var(--purple-400); font-weight: 800;
+    .card-icon svg { width: 28px; height: 28px; }
+
+    .card-title {
+      font-family: var(--font-display); font-size: 1.15rem;
+      font-weight: 800; color: var(--text-primary); margin-bottom: 0.3rem;
     }
-    .legal-section p, .legal-section ul {
-      color: var(--text-secondary); font-size: 0.93rem; line-height: 1.8;
+    .card-desc { font-size: 0.88rem; color: var(--text-secondary); line-height: 1.65; }
+    .card-body { flex: 1; }
+
+    .card-cta {
+      display: inline-flex; align-items: center; gap: 6px;
+      font-size: 0.85rem; font-weight: 700;
+      margin-top: 0.25rem; transition: gap 0.2s ease;
     }
-    .legal-section p + p { margin-top: 0.75rem; }
-    .legal-section ul { padding-left: 1.4rem; display: flex; flex-direction: column; gap: 0.5rem; margin-top: 0.5rem; }
-    .legal-section li::marker { color: var(--purple-400); }
-    .legal-section strong { color: var(--text-primary); font-weight: 700; }
-    .contact-detail-list { list-style: none !important; padding-left: 0 !important; }
-    .contact-detail-list li {
-      display: flex; align-items: flex-start; gap: 0.6rem;
-      padding: 0.45rem 0.75rem;
-      background: rgba(255,255,255,0.03);
-      border-radius: 8px; margin-bottom: 0.4rem;
-    }
-    .contact-detail-list li span.label {
-      color: var(--text-muted); font-size: 0.82rem; min-width: 180px; flex-shrink: 0;
-    }
-    .contact-detail-list li span.value {
-      color: var(--text-secondary); font-size: 0.88rem; word-break: break-all;
-    }
-    .legal-link { color: var(--purple-400); transition: color 0.2s; }
-    .legal-link:hover { color: var(--purple-500); }
-    .back-link {
-      display: inline-flex; align-items: center; gap: 8px;
-      color: var(--purple-400); font-size: 0.88rem; font-weight: 600;
-      margin-bottom: 2.5rem; transition: gap 0.2s ease;
-    }
-    .back-link:hover { gap: 12px; }
-    .intro-block {
-      background: rgba(124,58,237,0.07);
-      border: 1px solid rgba(124,58,237,0.18);
-      border-radius: var(--radius-md);
-      padding: 1.25rem 1.5rem;
-      color: var(--text-secondary); font-size: 0.92rem; line-height: 1.8;
-      margin-bottom: 1.5rem;
-    }
-    .warning-block {
-      background: rgba(239,68,68,0.06);
-      border: 1px solid rgba(239,68,68,0.18);
-      border-radius: var(--radius-sm);
-      padding: 0.9rem 1.1rem;
-      color: var(--text-secondary); font-size: 0.88rem; line-height: 1.75;
-      margin-top: 0.75rem;
+    .platform-card:hover .card-cta { gap: 10px; }
+
+    .card-tiktok { border-color: rgba(105,201,208,0.18); }
+    .card-tiktok .card-icon { background: rgba(0,0,0,0.3); border: 1px solid rgba(105,201,208,0.2); }
+    .card-tiktok:hover { border-color: rgba(105,201,208,0.45); box-shadow: 0 20px 50px rgba(105,201,208,0.08); }
+    .card-tiktok .card-cta { color: #69c9d0; }
+
+    .card-gplay { border-color: rgba(52,168,83,0.18); }
+    .card-gplay .card-icon { background: rgba(52,168,83,0.1); border: 1px solid rgba(52,168,83,0.22); }
+    .card-gplay:hover { border-color: rgba(52,168,83,0.45); box-shadow: 0 20px 50px rgba(52,168,83,0.08); }
+    .card-gplay .card-cta { color: #34a853; }
+
+    .game-pill {
+      display: inline-flex; align-items: center; gap: 0.4rem;
+      background: rgba(255,255,255,0.05);
+      border: 1px solid var(--bg-glass-border);
+      border-radius: var(--radius-full);
+      padding: 0.2rem 0.65rem;
+      font-size: 0.72rem; font-weight: 700;
+      color: var(--text-muted); letter-spacing: 0.03em;
     }
   </style>
 </head>
@@ -107,97 +104,54 @@
   </div>
 </nav>
 
-<main class="legal-page">
+<main class="privacy-hub">
   <div class="container">
-    <a href="index.html" class="back-link">
-      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M19 12H5M12 19l-7-7 7-7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-      Back to Home
-    </a>
-    <div class="legal-header">
+    <div class="privacy-hub-header">
       <div class="section-tag">Legal</div>
       <h1>Terms of <span class="gradient-text">Service</span></h1>
-      <p>Last updated: August 14, 2026</p>
+      <p>Select the platform you are playing on to read the terms that apply to you.</p>
     </div>
 
-    <div class="intro-block">
-      Please read these Terms of Service ("Terms") carefully before accessing or playing mini-games developed by <strong>Hamza Mücahit Çaltılı</strong> (trading as <strong>Artic Game Studio</strong>) on the TikTok Mini Games platform.
-      <br /><br />
-      By launching, playing, or otherwise accessing the Service, you agree to be bound by these Terms and the applicable <strong>TikTok Platform Guidelines</strong>.
-    </div>
+    <div class="platform-grid">
 
-    <div class="legal-body">
-
-      <div class="legal-section">
-        <h2><span class="section-num">1</span>Limited License</h2>
-        <p>We grant you a personal, revocable, non-exclusive, non-transferable, limited license to access and play our mini-games for personal, non-commercial entertainment purposes only.</p>
-      </div>
-
-      <div class="legal-section">
-        <h2><span class="section-num">2</span>Intellectual Property Rights</h2>
-        <p>All titles, source code, artwork, audio assets, animations, game design mechanics, UI/UX layouts, trademarks, and logos associated with our mini-games are the exclusive intellectual property of <strong>Hamza Mücahit Çaltılı (Artic Game Studio)</strong> or its licensed contributors.</p>
-        <p>You may not modify, reverse engineer, decompile, extract source code, distribute, sell, or create derivative works from our games without prior written authorization.</p>
-      </div>
-
-      <div class="legal-section">
-        <h2><span class="section-num">3</span>User Conduct &amp; Fair Play</h2>
-        <p>When using our games, you agree not to:</p>
-        <ul>
-          <li>Use automated systems, bots, hacks, or cheats to manipulate gameplay, leaderboards, or score mechanisms.</li>
-          <li>Exploit software bugs or design vulnerabilities for unfair advantage.</li>
-          <li>Attempt to bypass or interfere with in-game monetization, advertising displays, or reward verification mechanisms.</li>
-        </ul>
-      </div>
-
-      <div class="legal-section">
-        <h2><span class="section-num">4</span>In-Game Rewards &amp; Virtual Items</h2>
-        <p>Any virtual items, virtual currencies, boosters, or extra lives earned through gameplay or rewarded advertisement views:</p>
-        <ul>
-          <li>Have no real-world monetary value.</li>
-          <li>Cannot be redeemed for real currency, goods, or services.</li>
-          <li>Are non-transferable between users or outside the game environment.</li>
-        </ul>
-      </div>
-
-      <div class="legal-section">
-        <h2><span class="section-num">5</span>Disclaimer of Warranties &amp; Limitation of Liability</h2>
-        <p>The Service is provided on an <strong>"AS IS"</strong> and <strong>"AS AVAILABLE"</strong> basis without warranties of any kind, whether express or implied.</p>
-        <div class="warning-block">
-          To the maximum extent permitted by law, <strong>Artic Game Studio</strong> and <strong>Hamza Mücahit Çaltılı</strong> shall not be liable for any indirect, incidental, special, or consequential damages resulting from the use of, or inability to use, our games, including data loss or server interruptions.
+      <!-- TikTok Mini Games -->
+      <a href="terms-tiktok.html" class="platform-card card-tiktok" id="platform-tiktok">
+        <div class="card-icon">
+          <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M27.2 13.52a10.84 10.84 0 01-6.34-2.04v9.3a8.68 8.68 0 11-7.46-8.59v4.78a3.97 3.97 0 103.86 3.81V4h4.48c.4 2.83 2.65 5.06 5.46 5.41v4.11z" fill="#ffffff"/>
+            <path d="M21.6 20.78a8.68 8.68 0 11-7.46-8.59v4.78a3.97 3.97 0 103.86 3.81V4h4.48c.13.9.37 1.77.74 2.58A10.84 10.84 0 0027.2 8.6v4.92a10.84 10.84 0 01-5.6-2.72v9.98z" fill="#69C9D0" opacity="0.7"/>
+          </svg>
         </div>
-      </div>
+        <div class="card-body">
+          <div class="card-title">TikTok Mini Games</div>
+          <p class="card-desc">For all games published on the TikTok Mini Games platform. Governs gameplay, virtual items, intellectual property and ad monetization.</p>
+        </div>
+        <div class="card-cta">
+          Read terms
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M12 5l7 7-7 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </div>
+      </a>
 
-      <div class="legal-section">
-        <h2><span class="section-num">6</span>Modifications to Terms</h2>
-        <p>We reserve the right to update or modify these Terms at any time. Continued access to the game after modifications constitutes acceptance of the revised Terms.</p>
-      </div>
-
-      <div class="legal-section">
-        <h2><span class="section-num">7</span>Governing Law &amp; Contact</h2>
-        <p>These Terms shall be governed by and construed in accordance with the laws of <strong>Turkey</strong>.</p>
-        <p>For legal, technical, or licensing inquiries:</p>
-        <ul class="contact-detail-list">
-          <li>
-            <span class="label">Legal Representative</span>
-            <span class="value">Hamza Mücahit Çaltılı</span>
-          </li>
-          <li>
-            <span class="label">Studio Name</span>
-            <span class="value">Artic Game Studio</span>
-          </li>
-          <li>
-            <span class="label">Registered Address</span>
-            <span class="value">Muratreis Mah. Selamet Sk. No: 9, Üsküdar / İstanbul, Turkey</span>
-          </li>
-          <li>
-            <span class="label">Contact Email</span>
-            <span class="value"><a href="mailto:contact@articgamestudio.com" class="legal-link">contact@articgamestudio.com</a></span>
-          </li>
-          <li>
-            <span class="label">Tax Identification Number</span>
-            <span class="value">2281098176</span>
-          </li>
-        </ul>
-      </div>
+      <!-- Google Play Store -->
+      <a href="gpsandasterms.html" class="platform-card card-gplay" id="platform-googleplay">
+        <div class="card-icon">
+          <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M4 2.33L18.97 16 4 29.67V2.33z" fill="#34A853"/>
+            <path d="M4 2.33l15.93 9.2L24.4 7.2 7.67 1.2A3 3 0 004 2.33z" fill="#FBBC04"/>
+            <path d="M4 29.67L19.93 20.5l-4.5-4.5L4 29.67z" fill="#EA4335"/>
+            <path d="M24.4 24.8l-4.47-8.8 4.47-8.8C26.1 9.08 27 10.5 27 12s-.9 2.92-2.6 3.8v9z" fill="#4285F4"/>
+          </svg>
+        </div>
+        <div class="card-body">
+          <div class="card-title">Google Play Store</div>
+          <div style="margin-bottom:0.6rem;"><span class="game-pill">Frame Agent</span></div>
+          <p class="card-desc">For Frame Agent on Android. Covers licence, purchase, refunds, intellectual property and governing law.</p>
+        </div>
+        <div class="card-cta">
+          Read terms
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M12 5l7 7-7 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </div>
+      </a>
 
     </div>
   </div>
@@ -208,7 +162,7 @@
     <div class="footer-inner">
       <div class="footer-brand">
         <img src="logo.svg" alt="" class="footer-logo-img" aria-hidden="true" />
-        <span>© 2026 Artic Game Studio. All rights reserved.</span>
+        <span>&copy; 2026 Artic Game Studio. All rights reserved.</span>
       </div>
       <div class="footer-links">
         <a href="privacy.html" id="terms-privacy">Privacy Policy</a>

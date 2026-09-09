@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Frame Agent Terms of Use — Artic Game Studio. Google Play Store." />
+  <title>Terms of Use — Frame Agent | Artic Game Studio</title>
+  <link rel="icon" type="image/svg+xml" href="logo.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+  <style>
+    .legal-page { padding: 9rem 0 6rem; min-height: 100vh; }
+    .legal-header { margin-bottom: 3rem; }
+    .legal-header h1 {
+      font-family: var(--font-display); font-size: clamp(2rem, 5vw, 3rem);
+      font-weight: 800; letter-spacing: -0.02em; margin-bottom: 0.5rem;
+    }
+    .legal-header p { color: var(--text-muted); font-size: 0.88rem; }
+    .legal-body {
+      background: var(--bg-glass); border: 1px solid var(--bg-glass-border);
+      border-radius: var(--radius-lg); padding: clamp(1.75rem, 4vw, 3rem);
+      display: flex; flex-direction: column; gap: 0;
+    }
+    .legal-section { padding: 1.75rem 0; border-bottom: 1px solid var(--bg-glass-border); }
+    .legal-section:first-child { padding-top: 0; }
+    .legal-section:last-child { padding-bottom: 0; border-bottom: none; }
+    .legal-section h2 {
+      font-family: var(--font-display); font-size: 1.1rem; font-weight: 700;
+      margin-bottom: 0.85rem; color: var(--text-primary);
+      display: flex; align-items: center; gap: 0.6rem;
+    }
+    .legal-section h2 .section-num {
+      display: inline-flex; align-items: center; justify-content: center;
+      width: 28px; height: 28px; flex-shrink: 0;
+      background: rgba(124,58,237,0.14); border: 1px solid rgba(124,58,237,0.28);
+      border-radius: 8px; font-size: 0.75rem; color: var(--purple-400); font-weight: 800;
+    }
+    .legal-section p, .legal-section ul { color: var(--text-secondary); font-size: 0.93rem; line-height: 1.8; }
+    .legal-section p + p { margin-top: 0.75rem; }
+    .legal-section ul { padding-left: 1.4rem; display: flex; flex-direction: column; gap: 0.5rem; margin-top: 0.5rem; }
+    .legal-section li::marker { color: var(--purple-400); }
+    .legal-section strong { color: var(--text-primary); font-weight: 700; }
+    .contact-detail-list { list-style: none !important; padding-left: 0 !important; }
+    .contact-detail-list li {
+      display: flex; align-items: flex-start; gap: 0.6rem;
+      padding: 0.45rem 0.75rem; background: rgba(255,255,255,0.03);
+      border-radius: 8px; margin-bottom: 0.4rem;
+    }
+    .contact-detail-list li span.label { color: var(--text-muted); font-size: 0.82rem; min-width: 180px; flex-shrink: 0; }
+    .contact-detail-list li span.value { color: var(--text-secondary); font-size: 0.88rem; word-break: break-all; }
+    .legal-link { color: var(--purple-400); transition: color 0.2s; }
+    .legal-link:hover { color: var(--purple-500); }
+    .back-link {
+      display: inline-flex; align-items: center; gap: 8px;
+      color: var(--purple-400); font-size: 0.88rem; font-weight: 600;
+      margin-bottom: 2.5rem; transition: gap 0.2s ease;
+    }
+    .back-link:hover { gap: 12px; }
+    .intro-block {
+      background: rgba(124,58,237,0.07); border: 1px solid rgba(124,58,237,0.18);
+      border-radius: var(--radius-md); padding: 1.25rem 1.5rem;
+      color: var(--text-secondary); font-size: 0.92rem; line-height: 1.8; margin-bottom: 1.5rem;
+    }
+    .app-id-block {
+      background: rgba(52,168,83,0.06); border: 1px solid rgba(52,168,83,0.2);
+      border-radius: var(--radius-md); padding: 0.9rem 1.25rem;
+      color: var(--text-secondary); font-size: 0.88rem; line-height: 1.7; margin-bottom: 1.25rem;
+    }
+    .app-id-block code {
+      font-family: 'Courier New', monospace; font-size: 0.83rem; color: #34a853;
+      background: rgba(52,168,83,0.1); padding: 0.1rem 0.4rem; border-radius: 4px;
+    }
+    .platform-badges { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-top: 0.75rem; }
+    .platform-badge {
+      display: inline-flex; align-items: center; gap: 0.4rem;
+      background: rgba(255,255,255,0.05); border: 1px solid var(--bg-glass-border);
+      border-radius: 8px; padding: 0.3rem 0.75rem;
+      font-size: 0.78rem; font-weight: 600; color: var(--text-muted);
+    }
+    /* Language divider */
+    .lang-divider {
+      display: flex; align-items: center; gap: 1rem; margin: 3.5rem 0 2rem;
+    }
+    .lang-divider::before, .lang-divider::after {
+      content: ''; flex: 1; height: 1px; background: var(--bg-glass-border);
+    }
+    .lang-divider span {
+      display: inline-flex; align-items: center; gap: 0.5rem;
+      font-size: 0.78rem; font-weight: 700; color: var(--text-muted);
+      letter-spacing: 0.08em; text-transform: uppercase;
+      background: rgba(255,255,255,0.04); border: 1px solid var(--bg-glass-border);
+      border-radius: var(--radius-full); padding: 0.3rem 1rem;
+    }
+    .tr-intro-block {
+      background: rgba(220,38,38,0.05); border: 1px solid rgba(220,38,38,0.15);
+      border-radius: var(--radius-md); padding: 1.25rem 1.5rem;
+      color: var(--text-secondary); font-size: 0.92rem; line-height: 1.8; margin-bottom: 1.5rem;
+    }
+    .kvkk-badge {
+      display: inline-flex; align-items: center; gap: 0.5rem;
+      background: rgba(220,38,38,0.08); border: 1px solid rgba(220,38,38,0.2);
+      border-radius: var(--radius-full); padding: 0.3rem 0.85rem;
+      font-size: 0.75rem; font-weight: 700; color: #f87171;
+      margin-bottom: 0.75rem; letter-spacing: 0.04em;
+    }
+    .warning-block {
+      background: rgba(239,68,68,0.06); border: 1px solid rgba(239,68,68,0.18);
+      border-radius: var(--radius-sm); padding: 0.9rem 1.1rem;
+      color: var(--text-secondary); font-size: 0.88rem; line-height: 1.75; margin-top: 0.75rem;
+    }
+    .note-block {
+      background: rgba(124,58,237,0.05); border: 1px solid rgba(124,58,237,0.15);
+      border-radius: var(--radius-sm); padding: 0.85rem 1.1rem;
+      color: var(--text-secondary); font-size: 0.88rem; line-height: 1.75; margin-top: 0.75rem;
+    }
+  </style>
+</head>
+<body class="loaded">
+<div class="noise-overlay" aria-hidden="true"></div>
+
+<nav class="nav scrolled" role="navigation" aria-label="Main navigation">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo" aria-label="Artic Game Studio">
+      <img src="logo.svg" alt="Artic Game Studio Logo" class="nav-logo-img" />
+      <span class="nav-logo-text">Artic Game Studio</span>
+    </a>
+    <div class="nav-center">
+      <a href="privacy.html" class="nav-link" id="nav-priv">Privacy Policy</a>
+      <a href="terms.html" class="nav-link" id="nav-terms">Terms of Service</a>
+      <a href="index.html#contact" class="nav-link" id="nav-contact">Contact</a>
+    </div>
+  </div>
+</nav>
+
+<main class="legal-page">
+  <div class="container">
+
+    <!-- ===== ENGLISH ===== -->
+    <div class="legal-header">
+      <h1>Terms of <span class="gradient-text">Use</span></h1>
+      <div class="platform-badges">
+        <span class="platform-badge">
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M3.18 23.76c.35.19.77.19 1.15-.01l11.35-6.56-2.48-2.48-10.02 9.05zM.27 1.24C.1 1.57 0 1.95 0 2.38v19.24c0 .43.1.81.27 1.14l.07.07 10.78-10.78v-.26L.34 1.17l-.07.07zM20.48 10.31l-2.61-1.51-2.77 2.77 2.77 2.77 2.63-1.52c.75-.43.75-1.13-.02-1.51zM4.33.25L15.68 6.81l-2.48 2.48L3.18.24c.38-.21.8-.21 1.15.01z"/></svg>
+          Google Play
+        </span>
+      </div>
+      <p style="margin-top:0.75rem;">Last updated: 9 September 2026 &nbsp;&middot;&nbsp; Developer: Artic Game Studio (Hamza M&uuml;cahit &Ccedil;alt&#305;l&#305;)</p>
+    </div>
+
+    <div class="app-id-block">
+      These Terms of Use apply to the mobile application <strong>Frame Agent</strong> (<code>com.articgamestudio.frameagent</code>), published by <strong>Artic Game Studio</strong>.
+    </div>
+
+    <div class="intro-block">
+      By downloading or playing Frame Agent you agree to these Terms of Use. If you do not agree, please do not use the application.
+    </div>
+
+    <div class="legal-body">
+
+      <div class="legal-section">
+        <h2><span class="section-num">1</span>Licence</h2>
+        <p>Frame Agent is a one-time paid application. Your purchase grants you a <strong>personal, non-transferable, non-exclusive</strong> licence to use the app on devices linked to your Google account, in accordance with the Google Play Terms of Service.</p>
+        <p>This is a licence, not a transfer of ownership.</p>
+      </div>
+
+      <div class="legal-section">
+        <h2><span class="section-num">2</span>Permitted Use</h2>
+        <p>You may play the game for personal, non-commercial entertainment.</p>
+        <p>You may not:</p>
+        <ul>
+          <li>Decompile, reverse engineer or modify the application</li>
+          <li>Extract graphic, audio or code assets for use in other projects</li>
+          <li>Redistribute, rent or resell the application</li>
+          <li>Use automated tools, bots or cheats to manipulate gameplay</li>
+        </ul>
+      </div>
+
+      <div class="legal-section">
+        <h2><span class="section-num">3</span>Intellectual Property</h2>
+        <p>The game design, source code, interface, animations, original graphics, sound arrangement and the name "Frame Agent" belong to Artic Game Studio.</p>
+        <div class="note-block">
+          <strong>Regarding the paintings:</strong> The classical works featured in the game are in the <strong>public domain</strong>; their copyright has expired. We claim no ownership over them; they are presented for cultural and educational purposes. Full credits appear inside the application.
+        </div>
+      </div>
+
+      <div class="legal-section">
+        <h2><span class="section-num">4</span>In-Game Items</h2>
+        <p>In-game gold, boosters and saved progress exist only within the game. These items:</p>
+        <ul>
+          <li><strong>Have no real monetary value</strong></li>
+          <li>Cannot be exchanged for money, goods or services</li>
+          <li>Cannot be transferred between users or outside the game</li>
+          <li>Are lost if the application is uninstalled</li>
+        </ul>
+      </div>
+
+      <div class="legal-section">
+        <h2><span class="section-num">5</span>Progress and Data</h2>
+        <p>Your progress is stored <strong>only on your device</strong>. There is no cloud backup.</p>
+        <p>If you uninstall the app, clear its data or change devices, your progress <strong>cannot be recovered</strong>. This is by design — none of your data is held on our servers.</p>
+        <p>For details on the absence of personal data collection, see our <a href="gpsandasprivacy.html" class="legal-link">Privacy Policy</a>.</p>
+      </div>
+
+      <div class="legal-section">
+        <h2><span class="section-num">6</span>Purchase and Refunds</h2>
+        <p>The application is sold through Google Play. All payment processing is <strong>handled by Google</strong>; we do not receive, see or store your payment or billing information.</p>
+        <p>Refund requests must be made directly through Google Play, under their refund policy. We cannot process refunds ourselves.</p>
+      </div>
+
+      <div class="legal-section">
+        <h2><span class="section-num">7</span>Disclaimer of Warranties</h2>
+        <p>The application is provided <strong>"as is"</strong> and <strong>"as available"</strong>, without warranties of any kind, express or implied.</p>
+        <p>We cannot guarantee that the app will run without interruption or error on every device or Android version. We make reasonable efforts to keep it working correctly.</p>
+      </div>
+
+      <div class="legal-section">
+        <h2><span class="section-num">8</span>Limitation of Liability</h2>
+        <div class="warning-block">
+          To the maximum extent permitted by applicable law, Artic Game Studio and Hamza M&uuml;cahit &Ccedil;alt&#305;l&#305; shall not be liable for any indirect, incidental, special or consequential damages (including loss of game progress) arising from the use of, or inability to use, the application. In any event, total liability shall not exceed the amount you paid for the application.
+        </div>
+      </div>
+
+      <div class="legal-section">
+        <h2><span class="section-num">9</span>Updates and Changes</h2>
+        <p>We reserve the right to update the application and to add or remove features.</p>
+        <p>These terms may be revised. The updated version will be published on this page with a revised date. Continued use after a change constitutes acceptance of the new terms.</p>
+      </div>
+
+      <div class="legal-section">
+        <h2><span class="section-num">10</span>Termination</h2>
+        <p>Your licence terminates automatically if you breach these terms. You may also end it at any time by uninstalling the application.</p>
+      </div>
+
+      <div class="legal-section">
+        <h2><span class="section-num">11</span>Governing Law</h2>
+        <p>These terms are governed by the laws of the <strong>Republic of T&uuml;rkiye</strong>. The courts of Istanbul shall have jurisdiction over any disputes.</p>
+        <p>Your statutory consumer rights remain unaffected.</p>
+      </div>
+
+      <div class="legal-section">
+        <h2><span class="section-num">12</span>Contact</h2>
+        <ul class="contact-detail-list">
+          <li><span class="label">Studio</span><span class="value">Artic Game Studio</span></li>
+          <li><span class="label">Developer</span><span class="value">Hamza M&uuml;cahit &Ccedil;alt&#305;l&#305;</span></li>
+          <li><span class="label">Address</span><span class="value">Muratreis Mah. Selamet Sk. No: 9, &Uuml;sk&uuml;dar / &Icirc;stanbul, T&uuml;rkiye</span></li>
+          <li><span class="label">Email</span><span class="value"><a href="mailto:contact@articgamestudio.com" class="legal-link">contact@articgamestudio.com</a></span></li>
+        </ul>
+      </div>
+
+    </div>
+
+    <!-- ===== TURKISH / TÜRKÇE ===== -->
+    <div class="lang-divider"><span>&#127481;&#127479; T&uuml;rk&ccedil;e / Turkish</span></div>
+
+    <div class="kvkk-badge">T&uuml;rkiye &amp; T&uuml;ketici Haklar&#305;</div>
+    <div style="margin-bottom:2rem;">
+      <h2 style="font-family:var(--font-display);font-size:clamp(1.5rem,4vw,2.2rem);font-weight:800;letter-spacing:-0.02em;margin-bottom:0.5rem;">Kullan&#305;m <span class="gradient-text">Ko&#351;ullar&#305;</span></h2>
+      <p style="color:var(--text-muted);font-size:0.88rem;">Son g&uuml;ncelleme: 9 Eyl&uuml;l 2026 &nbsp;&middot;&nbsp; Geli&#351;tirici: Artic Game Studio (Hamza M&uuml;cahit &Ccedil;alt&#305;l&#305;)</p>
+    </div>
+
+    <div class="app-id-block" style="border-color:rgba(220,38,38,0.2);background:rgba(220,38,38,0.04);">
+      Bu Kullan&#305;m Ko&#351;ullar&#305;, <strong>Artic Game Studio</strong> taraf&#305;ndan yay&#305;mlanan <strong>Frame Agent</strong> (<code>com.articgamestudio.frameagent</code>) mobil uygulamas&#305;na aittir.
+    </div>
+
+    <div class="tr-intro-block">
+      Frame Agent'&#305; indirerek veya oynayarak bu Kullan&#305;m Ko&#351;ullar&#305;n&#305; kabul etmi&#351; olursunuz. Kabul etmiyorsan&#305;z uygulamay&#305; kullanmay&#305;n&#305;z.
+    </div>
+
+    <div class="legal-body" style="margin-top:0;">
+
+      <div class="legal-section">
+        <h2><span class="section-num">1</span>Lisans</h2>
+        <p>Frame Agent tek seferlik &uuml;cretli bir uygulamad&#305;r. Sat&#305;n al&#305;m&#305;n&#305;z size <strong>ki&#351;isel, devredilemez ve m&uuml;nhas&#305;r olmayan</strong> bir kullan&#305;m lisans&#305; verir. Uygulamay&#305; Google hesab&#305;n&#305;za ba&#287;l&#305; cihazlarda, Google Play Hizmet &#350;artlar&#305; &ccedil;er&ccedil;evesinde kullanabilirsiniz.</p>
+        <p>Bu bir lisanst&#305;r, m&uuml;lkiyet devri de&#287;ildir.</p>
+      </div>
+
+      <div class="legal-section">
+        <h2><span class="section-num">2</span>&#304;zin Verilen Kullan&#305;m</h2>
+        <p>Oyunu ki&#351;isel ve ticari olmayan e&#287;lence amac&#305;yla oynayabilirsiniz.</p>
+        <p>&#350;unlar&#305; yapamazs&#305;n&#305;z:</p>
+        <ul>
+          <li>Uygulamay&#305; kaynak koda d&ouml;n&uuml;&#351;t&uuml;rmek, tersine m&uuml;hendislik uygulamak veya de&#287;i&#351;tirmek</li>
+          <li>G&ouml;rsel, ses veya kod varl&#305;klar&#305;n&#305; &ccedil;&#305;kar&#305;p ba&#351;ka projelerde kullanmak</li>
+          <li>Uygulamay&#305; yeniden da&#287;&#305;tmak, kiralamak veya satmak</li>
+          <li>Otomatik ara&ccedil;lar, botlar veya hile yaz&#305;l&#305;mlar&#305;yla oynay&#305;&#351;&#305; man&#305;p&uuml;le etmek</li>
+        </ul>
+      </div>
+
+      <div class="legal-section">
+        <h2><span class="section-num">3</span>Fikri M&uuml;lkiyet</h2>
+        <p>Oyun tasar&#305;m&#305;, kaynak kodu, aray&uuml;z, animasyonlar, &ouml;zg&uuml;n grafikler, ses d&uuml;zenlemesi ve "Frame Agent" ad&#305; Artic Game Studio'ya aittir.</p>
+        <div class="note-block">
+          <strong>Tablolar hakk&#305;nda:</strong> Oyunda yer alan klasik eserler <strong>kamu mal&#305;d&#305;r</strong> ve telif s&uuml;releri dolmu&#351;tur. Bu eserler &uuml;zerinde m&uuml;lkiyet iddias&#305;nda bulunmuyoruz; k&uuml;lt&uuml;rel ve e&#287;itsel ama&ccedil;la sunulmaktad&#305;r. Ayr&#305;nt&#305;l&#305; k&uuml;nye uygulama i&ccedil;inde yer al&#305;r.
+        </div>
+      </div>
+
+      <div class="legal-section">
+        <h2><span class="section-num">4</span>Oyun &#304;&ccedil;i Varl&#305;klar</h2>
+        <p>Oyun i&ccedil;i alt&#305;n, boostlar ve ilerleme kayd&#305; yaln&#305;zca oyunun i&ccedil;inde ge&ccedil;erlidir. Bu varl&#305;klar:</p>
+        <ul>
+          <li><strong>Ger&ccedil;ek parasal de&#287;er ta&#351;&#305;maz</strong></li>
+          <li>Paraya, mala veya hizmete &ccedil;evrilemez</li>
+          <li>Kullan&#305;c&#305;lar aras&#305;nda veya oyun d&#305;&#351;&#305;na aktar&#305;lamaz</li>
+          <li>Uygulama kald&#305;r&#305;ld&#305;&#287;&#305;nda kaybolur</li>
+        </ul>
+      </div>
+
+      <div class="legal-section">
+        <h2><span class="section-num">5</span>&#304;lerleme ve Veri</h2>
+        <p>&#304;lerlemeniz <strong>yaln&#305;zca cihaz&#305;n&#305;zda</strong> saklan&#305;r. Bulut yedeklemesi bulunmaz.</p>
+        <p>Uygulamay&#305; kald&#305;r&#305;rsan&#305;z, verilerini temizlerseniz veya cihaz de&#287;i&#351;tirirseniz ilerlemeniz <strong>geri getirilemez</strong>. Bu, tasar&#305;m&#305;n bir sonucudur &mdash; hi&ccedil;bir veriniz sunucular&#305;m&#305;zda tutulmaz.</p>
+        <p>Ki&#351;isel veri toplanmad&#305;&#287;&#305;na dair ayr&#305;nt&#305;lar i&ccedil;in <a href="gpsandasprivacy.html" class="legal-link">Gizlilik Politikam&#305;za</a> bak&#305;n&#305;z.</p>
+      </div>
+
+      <div class="legal-section">
+        <h2><span class="section-num">6</span>Sat&#305;n Alma ve &#304;ade</h2>
+        <p>Uygulama Google Play &uuml;zerinden sat&#305;l&#305;r. T&uuml;m &ouml;deme i&#351;lemleri <strong>Google taraf&#305;ndan y&uuml;r&uuml;t&uuml;l&uuml;r</strong>; &ouml;deme veya fatura bilgilerinizi almay&#305;z, g&ouml;rmez ve saklamay&#305;z.</p>
+        <p>&#304;ade talepleri Google Play'in iade politikas&#305; kapsam&#305;nda, do&#287;rudan Google Play &uuml;zerinden yap&#305;lmal&#305;d&#305;r. Taraf&#305;m&#305;zca do&#287;rudan iade i&#351;lemi yap&#305;lamaz.</p>
+      </div>
+
+      <div class="legal-section">
+        <h2><span class="section-num">7</span>Garanti Reddi</h2>
+        <p>Uygulama <strong>"oldu&#287;u gibi"</strong> ve <strong>"mevcut haliyle"</strong> sunulur. A&ccedil;&#305;k veya z&#305;mni hi&ccedil;bir garanti verilmez.</p>
+        <p>Uygulamann&#305;n her cihazda, her Android s&uuml;r&uuml;m&uuml;nde kesintisiz veya hatas&#305;z &ccedil;al&#305;&#351;aca&#287;&#305;n&#305; garanti edemeyiz. D&uuml;zg&uuml;n &ccedil;al&#305;&#351;mas&#305; i&ccedil;in makul &ccedil;abay&#305; g&ouml;steririz.</p>
+      </div>
+
+      <div class="legal-section">
+        <h2><span class="section-num">8</span>Sorumlulu&#287;un S&#305;n&#305;rland&#305;r&#305;lmas&#305;</h2>
+        <div class="warning-block">
+          Y&uuml;r&uuml;rl&uuml;kteki hukukun izin verdi&#287;i azami &ouml;l&ccedil;&uuml;de, Artic Game Studio ve Hamza M&uuml;cahit &Ccedil;alt&#305;l&#305;; uygulamann&#305;n kullan&#305;m&#305;ndan veya kullan&#305;lamamas&#305;ndan do&#287;an dolayl&#305;, ar&#305;zi, &ouml;zel veya sonu&ccedil; niteli&#287;indeki zararlardan (oyun ilerlemesinin kayb&#305; dahil) sorumlu tutulamaz. Her h&acirc;l&uuml;k&acirc;rda toplam sorumluluk, uygulama i&ccedil;in &ouml;dedi&#287;iniz tutar&#305; a&#351;amaz.
+        </div>
+      </div>
+
+      <div class="legal-section">
+        <h2><span class="section-num">9</span>G&uuml;ncellemeler ve De&#287;i&#351;iklikler</h2>
+        <p>Uygulamay&#305; g&uuml;ncelleme, &ouml;zellik ekleme veya &ccedil;&#305;karma hakk&#305;m&#305;z sakl&#305;d&#305;r.</p>
+        <p>Bu ko&#351;ullar de&#287;i&#351;tirilebilir. G&uuml;ncellenmi&#351; s&uuml;r&uuml;m bu sayfada yay&#305;nlan&#305;r ve tarih revize edilir. De&#287;i&#351;iklikten sonra uygulamay&#305; kullanmaya devam etmeniz yeni ko&#351;ullar&#305; kabul etti&#287;iniz anlam&#305;na gelir.</p>
+      </div>
+
+      <div class="legal-section">
+        <h2><span class="section-num">10</span>Fesih</h2>
+        <p>Bu ko&#351;ullar&#305; ihlal etmeniz h&acirc;linde lisans&#305;n&#305;z kendili&#287;inden sona erer. Uygulamay&#305; istedi&#287;iniz zaman kald&#305;rarak da lisans&#305; sonland&#305;rabilirsiniz.</p>
+      </div>
+
+      <div class="legal-section">
+        <h2><span class="section-num">11</span>Uygulanacak Hukuk</h2>
+        <p>Bu ko&#351;ullar <strong>T&uuml;rkiye Cumhuriyeti</strong> hukukuna tabidir. Uyu&#351;mazl&#305;klarda &#304;stanbul mahkemeleri ve icra daireleri yetkilidir.</p>
+        <p>T&uuml;ketici mevzuat&#305;ndan do&#287;an haklar&#305;n&#305;z sakl&#305;d&#305;r.</p>
+      </div>
+
+      <div class="legal-section">
+        <h2><span class="section-num">12</span>&#304;leti&#351;im</h2>
+        <ul class="contact-detail-list">
+          <li><span class="label">St&uuml;dyo</span><span class="value">Artic Game Studio</span></li>
+          <li><span class="label">Geli&#351;tirici</span><span class="value">Hamza M&uuml;cahit &Ccedil;alt&#305;l&#305;</span></li>
+          <li><span class="label">Adres</span><span class="value">Muratreis Mah. Selamet Sk. No: 9, &Uuml;sk&uuml;dar / &#304;stanbul, T&uuml;rkiye</span></li>
+          <li><span class="label">E-posta</span><span class="value"><a href="mailto:contact@articgamestudio.com" class="legal-link">contact@articgamestudio.com</a></span></li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+</main>
+
+<footer class="footer" role="contentinfo">
+  <div class="container">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <img src="logo.svg" alt="" class="footer-logo-img" aria-hidden="true" />
+        <span>&copy; 2026 Artic Game Studio. All rights reserved.</span>
+      </div>
+      <div class="footer-links">
+        <a href="privacy.html" id="gpsa-terms-privacy">Privacy Policy</a>
+        <a href="terms.html" id="gpsa-terms-tos">Terms of Service</a>
+        <a href="index.html#contact" id="gpsa-terms-contact">Contact</a>
+      </div>
+    </div>
+  </div>
+</footer>
+</body>
+</html>
