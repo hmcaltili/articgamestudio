@@ -1,0 +1,673 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Frame Agent — Apple App Store Terms of Use &amp; Privacy Policy | Artic Game Studio." />
+  <title>App Store Legal — Frame Agent | Artic Game Studio</title>
+  <link rel="icon" type="image/svg+xml" href="logo.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+  <style>
+    .legal-page { padding: 9rem 0 6rem; min-height: 100vh; }
+    .legal-header { margin-bottom: 3rem; }
+    .legal-header h1 {
+      font-family: var(--font-display); font-size: clamp(2rem, 5vw, 3rem);
+      font-weight: 800; letter-spacing: -0.02em; margin-bottom: 0.5rem;
+    }
+    .legal-header p { color: var(--text-muted); font-size: 0.88rem; }
+    .legal-body {
+      background: var(--bg-glass);
+      border: 1px solid var(--bg-glass-border);
+      border-radius: var(--radius-lg);
+      padding: clamp(1.75rem, 4vw, 3rem);
+      display: flex; flex-direction: column; gap: 0;
+    }
+    .legal-section {
+      padding: 1.75rem 0;
+      border-bottom: 1px solid var(--bg-glass-border);
+    }
+    .legal-section:first-child { padding-top: 0; }
+    .legal-section:last-child { padding-bottom: 0; border-bottom: none; }
+    .legal-section h2 {
+      font-family: var(--font-display); font-size: 1.1rem; font-weight: 700;
+      margin-bottom: 0.85rem; color: var(--text-primary);
+      display: flex; align-items: center; gap: 0.6rem;
+    }
+    .legal-section h2 .section-num {
+      display: inline-flex; align-items: center; justify-content: center;
+      width: 28px; height: 28px; flex-shrink: 0;
+      background: rgba(124,58,237,0.14);
+      border: 1px solid rgba(124,58,237,0.28);
+      border-radius: 8px;
+      font-size: 0.75rem; color: var(--purple-400); font-weight: 800;
+    }
+    .legal-section p, .legal-section ul {
+      color: var(--text-secondary); font-size: 0.93rem; line-height: 1.8;
+    }
+    .legal-section p + p { margin-top: 0.75rem; }
+    .legal-section ul { padding-left: 1.4rem; display: flex; flex-direction: column; gap: 0.5rem; margin-top: 0.5rem; }
+    .legal-section li::marker { color: var(--purple-400); }
+    .legal-section strong { color: var(--text-primary); font-weight: 700; }
+    .contact-detail-list { list-style: none !important; padding-left: 0 !important; }
+    .contact-detail-list li {
+      display: flex; align-items: flex-start; gap: 0.6rem;
+      padding: 0.45rem 0.75rem;
+      background: rgba(255,255,255,0.03);
+      border-radius: 8px; margin-bottom: 0.4rem;
+    }
+    .contact-detail-list li span.label {
+      color: var(--text-muted); font-size: 0.82rem; min-width: 180px; flex-shrink: 0;
+    }
+    .contact-detail-list li span.value {
+      color: var(--text-secondary); font-size: 0.88rem; word-break: break-all;
+    }
+    .legal-link { color: var(--purple-400); transition: color 0.2s; }
+    .legal-link:hover { color: var(--purple-500); }
+    .intro-block {
+      background: rgba(124,58,237,0.07);
+      border: 1px solid rgba(124,58,237,0.18);
+      border-radius: var(--radius-md);
+      padding: 1.25rem 1.5rem;
+      color: var(--text-secondary); font-size: 0.92rem; line-height: 1.8;
+      margin-bottom: 1.5rem;
+    }
+    .platform-badges { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-top: 0.75rem; }
+    .platform-badge {
+      display: inline-flex; align-items: center; gap: 0.4rem;
+      background: rgba(255,255,255,0.05);
+      border: 1px solid var(--bg-glass-border);
+      border-radius: 8px;
+      padding: 0.3rem 0.75rem;
+      font-size: 0.78rem; font-weight: 600; color: var(--text-muted);
+    }
+    .app-id-block {
+      background: rgba(52,168,83,0.06);
+      border: 1px solid rgba(52,168,83,0.2);
+      border-radius: var(--radius-md);
+      padding: 0.9rem 1.25rem;
+      color: var(--text-secondary); font-size: 0.88rem; line-height: 1.7;
+      margin-bottom: 1.25rem;
+    }
+    .app-id-block code {
+      font-family: 'Courier New', monospace;
+      font-size: 0.83rem; color: #34a853;
+      background: rgba(52,168,83,0.1);
+      padding: 0.1rem 0.4rem; border-radius: 4px;
+    }
+    .lang-divider {
+      display: flex; align-items: center; gap: 1rem;
+      margin: 3.5rem 0 2rem;
+    }
+    .lang-divider::before, .lang-divider::after {
+      content: ''; flex: 1;
+      height: 1px; background: var(--bg-glass-border);
+    }
+    .lang-divider span {
+      display: inline-flex; align-items: center; gap: 0.5rem;
+      font-size: 0.78rem; font-weight: 700; color: var(--text-muted);
+      letter-spacing: 0.08em; text-transform: uppercase;
+      background: rgba(255,255,255,0.04);
+      border: 1px solid var(--bg-glass-border);
+      border-radius: var(--radius-full);
+      padding: 0.3rem 1rem;
+    }
+    .doc-divider {
+      display: flex; align-items: center; gap: 1rem;
+      margin: 4.5rem 0 3rem;
+    }
+    .doc-divider::before, .doc-divider::after {
+      content: ''; flex: 1; height: 2px;
+      background: linear-gradient(to right, transparent, rgba(124,58,237,0.35), transparent);
+    }
+    .doc-divider span {
+      display: inline-flex; align-items: center; gap: 0.5rem;
+      font-size: 0.8rem; font-weight: 800; color: var(--purple-400);
+      letter-spacing: 0.08em; text-transform: uppercase;
+      background: rgba(124,58,237,0.08);
+      border: 1px solid rgba(124,58,237,0.25);
+      border-radius: var(--radius-full);
+      padding: 0.4rem 1.25rem;
+    }
+    .tr-intro-block {
+      background: rgba(220,38,38,0.05);
+      border: 1px solid rgba(220,38,38,0.15);
+      border-radius: var(--radius-md);
+      padding: 1.25rem 1.5rem;
+      color: var(--text-secondary); font-size: 0.92rem; line-height: 1.8;
+      margin-bottom: 1.5rem;
+    }
+    .kvkk-badge {
+      display: inline-flex; align-items: center; gap: 0.5rem;
+      background: rgba(220,38,38,0.08);
+      border: 1px solid rgba(220,38,38,0.2);
+      border-radius: var(--radius-full);
+      padding: 0.3rem 0.85rem;
+      font-size: 0.75rem; font-weight: 700; color: #f87171;
+      margin-bottom: 0.75rem; letter-spacing: 0.04em;
+    }
+    .warning-block {
+      background: rgba(239,68,68,0.06); border: 1px solid rgba(239,68,68,0.18);
+      border-radius: var(--radius-sm); padding: 0.9rem 1.1rem;
+      color: var(--text-secondary); font-size: 0.88rem; line-height: 1.75; margin-top: 0.75rem;
+    }
+    .note-block {
+      background: rgba(124,58,237,0.05); border: 1px solid rgba(124,58,237,0.15);
+      border-radius: var(--radius-sm); padding: 0.85rem 1.1rem;
+      color: var(--text-secondary); font-size: 0.88rem; line-height: 1.75; margin-top: 0.75rem;
+    }
+    .nutrition-table {
+      width: 100%; border-collapse: collapse; margin-top: 0.75rem; font-size: 0.88rem;
+    }
+    .nutrition-table th, .nutrition-table td {
+      padding: 0.55rem 0.85rem; text-align: left;
+      border-bottom: 1px solid var(--bg-glass-border);
+      color: var(--text-secondary);
+    }
+    .nutrition-table th {
+      color: var(--text-primary); font-weight: 700; font-size: 0.8rem;
+      background: rgba(255,255,255,0.03);
+    }
+    .nutrition-table td:last-child { color: #34d399; font-weight: 600; }
+  </style>
+</head>
+<body class="loaded">
+<div class="noise-overlay" aria-hidden="true"></div>
+
+<nav class="nav scrolled" role="navigation" aria-label="Main navigation">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo" aria-label="Artic Game Studio">
+      <img src="logo.svg" alt="Artic Game Studio Logo" class="nav-logo-img" />
+      <span class="nav-logo-text">Artic Game Studio</span>
+    </a>
+    <div class="nav-center">
+      <a href="privacy.html" class="nav-link" id="nav-priv">Privacy Policy</a>
+      <a href="terms.html" class="nav-link" id="nav-terms">Terms of Service</a>
+      <a href="index.html#contact" class="nav-link" id="nav-contact">Contact</a>
+    </div>
+  </div>
+</nav>
+
+<main class="legal-page">
+  <div class="container">
+
+    <!-- ===== TERMS OF USE — ENGLISH ===== -->
+    <div class="legal-header">
+      <h1>Terms of <span class="gradient-text">Use</span></h1>
+      <div class="platform-badges">
+        <span class="platform-badge">
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>
+          Apple App Store
+        </span>
+      </div>
+      <p style="margin-top:0.75rem;">Last updated: 21 September 2026 &nbsp;&middot;&nbsp; Developer: Artic Game Studio (Hamza M&uuml;cahit &Ccedil;alt&#305;l&#305;)</p>
+    </div>
+
+    <div class="app-id-block">
+      These Terms of Use apply to the mobile application <strong>Frame Agent</strong> (<code>com.articgamestudio.frameagent</code>), published by <strong>Artic Game Studio</strong> on the Apple App Store.
+    </div>
+
+    <div class="intro-block">
+      By downloading or playing Frame Agent, you agree to these Terms of Use. If you do not agree, please do not use the application.
+    </div>
+
+    <div class="legal-body">
+
+      <div class="legal-section">
+        <h2><span class="section-num">1</span>Licence</h2>
+        <p>Frame Agent is a one-time paid application. Your purchase grants you a <strong>personal, non-transferable, non-exclusive</strong> licence to use the app on any Apple-branded products that you own or control, in accordance with the Apple Media Services Terms and Conditions and Family Sharing rules.</p>
+        <p>This is a licence, not a transfer of ownership.</p>
+      </div>
+
+      <div class="legal-section">
+        <h2><span class="section-num">2</span>Permitted Use</h2>
+        <p>You may play the game for personal, non-commercial entertainment.</p>
+        <p>You may not:</p>
+        <ul>
+          <li>Decompile, reverse engineer or modify the application</li>
+          <li>Extract graphic, audio or code assets for use in other projects</li>
+          <li>Redistribute, rent or resell the application</li>
+          <li>Use automated tools, bots or cheats to manipulate gameplay</li>
+        </ul>
+      </div>
+
+      <div class="legal-section">
+        <h2><span class="section-num">3</span>Intellectual Property</h2>
+        <p>The game design, source code, interface, animations, original graphics, sound arrangement and the name "Frame Agent" belong to Artic Game Studio.</p>
+        <div class="note-block">
+          <strong>Regarding the paintings:</strong> The classical works featured in the game are in the <strong>public domain</strong>; their copyright has expired. We claim no ownership over them; they are presented for cultural and educational purposes. Full credits appear inside the application.
+        </div>
+      </div>
+
+      <div class="legal-section">
+        <h2><span class="section-num">4</span>In-Game Items</h2>
+        <p>In-game gold, boosters and saved progress exist only within the game. These items:</p>
+        <ul>
+          <li><strong>Have no real monetary value</strong></li>
+          <li>Cannot be exchanged for money, goods or services</li>
+          <li>Cannot be transferred between users or outside the game</li>
+          <li>Are lost if the application is uninstalled</li>
+        </ul>
+      </div>
+
+      <div class="legal-section">
+        <h2><span class="section-num">5</span>Progress and Data</h2>
+        <p>Your progress is stored <strong>only on your device's local storage</strong>. There is no cloud backup or server-side synchronization.</p>
+        <p>If you uninstall the app, clear its data or change devices, your progress <strong>cannot be recovered</strong>. This is by design &mdash; none of your data is held on our servers.</p>
+        <p>For details on the absence of personal data collection, see our <a href="#privacy-policy" class="legal-link">Privacy Policy</a> below.</p>
+      </div>
+
+      <div class="legal-section">
+        <h2><span class="section-num">6</span>Purchase and Refunds</h2>
+        <p>The application is sold through the Apple App Store. All payment processing, billing and invoicing are <strong>handled entirely by Apple</strong>; we do not receive, see or store your payment or billing information.</p>
+        <p>Refund requests must be submitted directly through Apple (e.g., via <a href="https://reportaproblem.apple.com" target="_blank" rel="noopener noreferrer" class="legal-link">reportaproblem.apple.com</a>), subject to Apple's refund policies. We cannot process refunds ourselves.</p>
+      </div>
+
+      <div class="legal-section">
+        <h2><span class="section-num">7</span>Disclaimer of Warranties</h2>
+        <p>The application is provided <strong>"as is"</strong> and <strong>"as available"</strong>, without warranties of any kind, express or implied.</p>
+        <p>We cannot guarantee that the app will run without interruption or error on every iOS/iPadOS device or operating system version. We make reasonable efforts to keep it working correctly.</p>
+      </div>
+
+      <div class="legal-section">
+        <h2><span class="section-num">8</span>Limitation of Liability</h2>
+        <div class="warning-block">
+          To the maximum extent permitted by applicable law, Artic Game Studio and Hamza M&uuml;cahit &Ccedil;alt&#305;l&#305; shall not be liable for any indirect, incidental, special or consequential damages (including loss of game progress) arising from the use of, or inability to use, the application. In any event, total liability shall not exceed the amount you paid for the application.
+        </div>
+      </div>
+
+      <div class="legal-section">
+        <h2><span class="section-num">9</span>Updates and Changes</h2>
+        <p>We reserve the right to update the application and to add or remove features.</p>
+        <p>These terms may be revised. The updated version will be published with a revised date. Continued use after a change constitutes acceptance of the new terms.</p>
+      </div>
+
+      <div class="legal-section">
+        <h2><span class="section-num">10</span>Termination</h2>
+        <p>Your licence terminates automatically if you breach these terms. You may also end it at any time by deleting the application from your device.</p>
+      </div>
+
+      <div class="legal-section">
+        <h2><span class="section-num">11</span>Governing Law</h2>
+        <p>These terms are governed by the laws of the <strong>Republic of T&uuml;rkiye</strong>. The courts of Istanbul shall have jurisdiction over any disputes, without prejudice to mandatory local consumer protection laws applicable in your country of residence.</p>
+        <p>Your statutory consumer rights remain unaffected.</p>
+      </div>
+
+      <div class="legal-section">
+        <h2><span class="section-num">12</span>Contact</h2>
+        <ul class="contact-detail-list">
+          <li><span class="label">Studio</span><span class="value">Artic Game Studio</span></li>
+          <li><span class="label">Developer</span><span class="value">Hamza M&uuml;cahit &Ccedil;alt&#305;l&#305;</span></li>
+          <li><span class="label">Address</span><span class="value">Muratreis Mah. Selamet Sk. No: 9, &Uuml;sk&uuml;dar / &Icirc;stanbul, T&uuml;rkiye</span></li>
+          <li><span class="label">Email</span><span class="value"><a href="mailto:contact@articgamestudio.com" class="legal-link">contact@articgamestudio.com</a></span></li>
+        </ul>
+      </div>
+
+    </div>
+
+    <!-- ===== TERMS OF USE — TÜRKÇE ===== -->
+    <div class="lang-divider"><span>&#127481;&#127479; Türkçe / Turkish</span></div>
+
+    <div class="kvkk-badge">Türkiye &amp; Tüketici Hakları</div>
+    <div style="margin-bottom:2rem;">
+      <h2 style="font-family:var(--font-display);font-size:clamp(1.5rem,4vw,2.2rem);font-weight:800;letter-spacing:-0.02em;margin-bottom:0.5rem;">Kullanım <span class="gradient-text">Koşulları</span></h2>
+      <p style="color:var(--text-muted);font-size:0.88rem;">Son güncelleme: 21 Eylül 2026 &nbsp;&middot;&nbsp; Geliştirici: Artic Game Studio (Hamza Mücahit Çaltılı)</p>
+    </div>
+
+    <div class="app-id-block" style="border-color:rgba(220,38,38,0.2);background:rgba(220,38,38,0.04);">
+      Bu Kullanım Koşulları, <strong>Artic Game Studio</strong> tarafından Apple App Store'da yayımlanan <strong>Frame Agent</strong> (<code>com.articgamestudio.frameagent</code>) mobil uygulamasına aittir.
+    </div>
+
+    <div class="tr-intro-block">
+      Frame Agent'ı indirerek veya oynayarak bu Kullanım Koşullarını kabul etmiş olursunuz. Kabul etmiyorsanız uygulamayı kullanmayınız.
+    </div>
+
+    <div class="legal-body" style="margin-top:0;">
+
+      <div class="legal-section">
+        <h2><span class="section-num">1</span>Lisans</h2>
+        <p>Frame Agent tek seferlik ücretli bir uygulamadır. Satın alımınız size, sahip olduğunuz veya kontrol ettiğiniz Apple markalı cihazlarda, Apple Medya Hizmetleri Hüküm ve Koşulları ile Aile Paylaşımı kuralları çerçevesinde <strong>kişisel, devredilemez ve münhasır olmayan</strong> bir kullanım lisansı verir.</p>
+        <p>Bu bir lisans sözleşmesidir; mülkiyet devri niteliği taşımaz.</p>
+      </div>
+
+      <div class="legal-section">
+        <h2><span class="section-num">2</span>İzin Verilen Kullanım</h2>
+        <p>Oyunu kişisel ve ticari olmayan eğlence amacıyla oynayabilirsiniz.</p>
+        <p>Şunları yapamazsınız:</p>
+        <ul>
+          <li>Uygulamayı kaynak koda dönüştürmek, tersine mühendislik uygulamak veya değiştirmek</li>
+          <li>Görsel, ses veya kod varlıklarını çıkarıp başka projelerde kullanmak</li>
+          <li>Uygulamayı yeniden dağıtmak, kiralamak veya satmak</li>
+          <li>Otomatik araçlar, botlar veya hile yazılımlarıyla oynanışı manipüle etmek</li>
+        </ul>
+      </div>
+
+      <div class="legal-section">
+        <h2><span class="section-num">3</span>Fikri Mülkiyet</h2>
+        <p>Oyun tasarımı, kaynak kodu, arayüz, animasyonlar, özgün grafikler, ses düzenlemesi ve "Frame Agent" ticari adı Artic Game Studio'ya aittir.</p>
+        <div class="note-block">
+          <strong>Tablolar hakkında:</strong> Oyunda yer alan klasik sanat eserleri <strong>kamu malıdır</strong> (public domain) ve telif koruma süreleri dolmuştur. Bu eserler üzerinde mülkiyet iddiasında bulunulmamaktadır; kültürel ve eğitsel bağlamda sunulmuştur. Detaylı künye uygulama içinde yer alır.
+        </div>
+      </div>
+
+      <div class="legal-section">
+        <h2><span class="section-num">4</span>Oyun İçi Varlıklar</h2>
+        <p>Oyun içi altın, güçlendiriciler ve ilerleme durumu yalnızca oyun içinde geçerlidir:</p>
+        <ul>
+          <li><strong>Gerçek parasal değer taşımaz</strong></li>
+          <li>Paraya, mala veya hizmete dönüştürülemez</li>
+          <li>Kullanıcılar arasında veya oyun dışına devredilemez</li>
+          <li>Uygulama cihazdan kaldırıldığında silinir</li>
+        </ul>
+      </div>
+
+      <div class="legal-section">
+        <h2><span class="section-num">5</span>İlerleme ve Veri</h2>
+        <p>İlerlemeniz <strong>yalnızca cihazınızın yerel hafızasında</strong> saklanır. Bulut yedeklemesi veya sunucu senkronizasyonu bulunmaz.</p>
+        <p>Uygulamayı kaldırmanız, cihaz verilerini temizlemeniz veya cihaz değiştirmeniz durumunda ilerlemeniz <strong>geri getirilemez</strong>. Bu durum mimari bir tercihtir &mdash; sunucularımızda hiçbir veriniz tutulmaz.</p>
+        <p>Kişisel veri toplanmadığına dair ayrıntılar için <a href="#privacy-policy-tr" class="legal-link">Gizlilik Politikamızı</a> inceleyiniz.</p>
+      </div>
+
+      <div class="legal-section">
+        <h2><span class="section-num">6</span>Satın Alma ve İade</h2>
+        <p>Uygulama Apple App Store üzerinden satılmaktadır. Tüm ödeme, fatura ve tahsilat işlemleri <strong>bütünüyle Apple tarafından yürütülür</strong>; tarafımıza kart, ödeme veya fatura bilgisi ulaşmaz ve saklanmaz.</p>
+        <p>İade talepleri Apple'ın iade politikaları kapsamında doğrudan Apple üzerinden (<a href="https://reportaproblem.apple.com" target="_blank" rel="noopener noreferrer" class="legal-link">reportaproblem.apple.com</a>) yapılmalıdır. Geliştirici olarak doğrudan iade gerçekleştirme yetkimiz bulunmamaktadır.</p>
+      </div>
+
+      <div class="legal-section">
+        <h2><span class="section-num">7</span>Garanti Reddi</h2>
+        <p>Uygulama <strong>"olduğu gibi"</strong> ve <strong>"mevcut haliyle"</strong> sunulur. Açık veya zımni hiçbir garanti verilmez.</p>
+        <p>Uygulamanın her iOS/iPadOS cihazında veya her işletim sistemi sürümünde kesintisiz veya tamamen hatasız çalışacağı taahhüt edilemez; ancak kararlı çalışması adına makul teknik çaba gösterilmektedir.</p>
+      </div>
+
+      <div class="legal-section">
+        <h2><span class="section-num">8</span>Sorumluluğun Sınırlandırılması</h2>
+        <div class="warning-block">
+          Yürürlükteki mevzuatın izin verdiği azami ölçüde; Artic Game Studio ve Hamza Mücahit Çaltılı, uygulamanın kullanımından veya kullanılamamasından doğabilecek dolaylı, arızi veya sonuç niteliğindeki zararlardan (oyun ilerlemesi kaybı dahil) sorumlu tutulamaz. Her durumda toplam sorumluluk, uygulama için ödenen satın alma tutarı ile sınırlıdır.
+        </div>
+      </div>
+
+      <div class="legal-section">
+        <h2><span class="section-num">9</span>Güncellemeler ve Değişiklikler</h2>
+        <p>Uygulamayı güncelleme, özellik ekleme veya çıkarma hakkımız saklıdır.</p>
+        <p>Bu koşullar güncellenebilir. Değişiklikler bu metinde tarih revize edilerek yayınlanır. Değişiklik sonrasında uygulamanın kullanılmaya devam edilmesi güncel şartların kabulü anlamına gelir.</p>
+      </div>
+
+      <div class="legal-section">
+        <h2><span class="section-num">10</span>Fesih</h2>
+        <p>Koşulların ihlali durumunda lisans kendiliğinden hükümsüz kalır. Uygulamayı cihazınızdan kaldırarak kullanım hakkınızı dilediğiniz an sonlandırabilirsiniz.</p>
+      </div>
+
+      <div class="legal-section">
+        <h2><span class="section-num">11</span>Uygulanacak Hukuk</h2>
+        <p>Bu koşullar <strong>Türkiye Cumhuriyeti</strong> hukukuna tabidir. Uyuşmazlıklarda İstanbul Mahkemeleri ve İcra Daireleri yetkilidir; ikamet ettiğiniz ülkedeki zorunlu tüketici kanunlarından doğan yasal haklarınız saklıdır.</p>
+      </div>
+
+      <div class="legal-section">
+        <h2><span class="section-num">12</span>İletişim</h2>
+        <ul class="contact-detail-list">
+          <li><span class="label">Stüdyo</span><span class="value">Artic Game Studio</span></li>
+          <li><span class="label">Geliştirici</span><span class="value">Hamza Mücahit Çaltılı</span></li>
+          <li><span class="label">Adres</span><span class="value">Muratreis Mah. Selamet Sk. No: 9, Üsküdar / İstanbul, Türkiye</span></li>
+          <li><span class="label">E-posta</span><span class="value"><a href="mailto:contact@articgamestudio.com" class="legal-link">contact@articgamestudio.com</a></span></li>
+        </ul>
+      </div>
+
+    </div>
+
+    <!-- ===== DOCUMENT DIVIDER ===== -->
+    <div class="doc-divider" id="privacy-policy"><span>&#128274; Privacy Policy</span></div>
+
+    <!-- ===== PRIVACY POLICY — ENGLISH ===== -->
+    <div class="legal-header" style="margin-bottom:2rem;">
+      <h1>Privacy <span class="gradient-text">Policy</span></h1>
+      <div class="platform-badges">
+        <span class="platform-badge">
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>
+          Apple App Store
+        </span>
+      </div>
+      <p style="margin-top:0.75rem;">Last updated: 21 September 2026 &nbsp;&middot;&nbsp; Developer: Artic Game Studio (Hamza M&uuml;cahit &Ccedil;alt&#305;l&#305;)</p>
+    </div>
+
+    <div class="app-id-block">
+      This Privacy Policy applies to the mobile application <strong>Frame Agent</strong> (<code>com.articgamestudio.frameagent</code>), published by <strong>Artic Game Studio</strong> on the Apple App Store.
+    </div>
+
+    <div class="intro-block">
+      <strong>Frame Agent does not collect, store, track or share any personal data.</strong>
+      <br /><br />
+      The game runs entirely on your device. It requires no internet connection, requires no user account or registration, contains no advertisements, includes no third-party SDKs, and sends no data to any server.
+    </div>
+
+    <div class="legal-body">
+
+      <div class="legal-section">
+        <h2><span class="section-num">1</span>Data We Do Not Collect</h2>
+        <p>This application collects <strong>none</strong> of the following:</p>
+        <ul>
+          <li>Name, email address, phone number or personal identifiers</li>
+          <li>Location data (precise or coarse)</li>
+          <li>Device identifiers, IDFA (Identifier for Advertisers) or IDFV</li>
+          <li>Contacts, photos, camera or microphone data</li>
+          <li>Usage analytics, diagnostic reports or behavioral tracking</li>
+          <li>IP addresses or network traffic information</li>
+        </ul>
+        <p style="margin-top:0.75rem;">The application requests <strong>zero system permissions</strong> and does not track you across apps or websites.</p>
+      </div>
+
+      <div class="legal-section">
+        <h2><span class="section-num">2</span>Information Stored on Your Device</h2>
+        <p>To save your game state, some information is stored <strong>solely within your device's local sandboxed storage</strong>:</p>
+        <ul>
+          <li>Your current level and completed paintings</li>
+          <li>In-game gold and booster counts</li>
+          <li>Audio, haptic feedback and language preferences</li>
+          <li>Quiz scores and progress</li>
+        </ul>
+        <p style="margin-top:0.75rem;">This information <strong>never leaves your device</strong>. It does not reach us, Apple, or any third party. It is permanently deleted when you delete the app from your device.</p>
+      </div>
+
+      <div class="legal-section">
+        <h2><span class="section-num">3</span>Third-Party Services &amp; Analytics</h2>
+        <p>The application contains <strong>no third-party software development kits (SDKs)</strong>, no analytics services, no advertising frameworks, and no external tracking tools.</p>
+        <p>Frame Agent is a one-time paid download. All transaction processing is managed directly by Apple App Store; no financial, card, or billing information is ever shared with or accessible to us.</p>
+      </div>
+
+      <div class="legal-section">
+        <h2><span class="section-num">4</span>Device Features</h2>
+        <p>The application locally utilizes:</p>
+        <ul>
+          <li><strong>Haptics (Taptic Engine)</strong> &mdash; Provides subtle tactile feedback for puzzle interactions. Can be toggled off inside the in-game Settings. Collects no data.</li>
+          <li><strong>Native Share Sheet</strong> &mdash; Triggered only if you voluntarily tap the in-game share icon to invoke iOS's built-in share sheet. The app neither accesses nor transmits the selected destination or shared content.</li>
+        </ul>
+      </div>
+
+      <div class="legal-section">
+        <h2><span class="section-num">5</span>Children's Privacy</h2>
+        <p>Because Frame Agent collects absolutely no personal information from any user, it strictly complies with global children's privacy standards, including the Children's Online Privacy Protection Act (COPPA) and Apple App Store Kids &amp; Family guidelines. No data is knowingly or unknowingly collected from children under 13 (or applicable local age threshold).</p>
+      </div>
+
+      <div class="legal-section">
+        <h2><span class="section-num">6</span>App Store Privacy Nutrition Labels (App Privacy Details)</h2>
+        <p>In compliance with Apple's App Store Privacy Requirements:</p>
+        <table class="nutrition-table">
+          <thead>
+            <tr><th>Category</th><th>Status</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Data Used to Track You</td><td>None</td></tr>
+            <tr><td>Data Linked to You</td><td>None</td></tr>
+            <tr><td>Data Not Linked to You</td><td>None</td></tr>
+          </tbody>
+        </table>
+        <p style="margin-top:0.75rem;">Frame Agent qualifies for the <strong>"Data Not Collected"</strong> designation on the App Store product page.</p>
+      </div>
+
+      <div class="legal-section">
+        <h2><span class="section-num">7</span>Your Rights</h2>
+        <p>Because we hold no personal data, identifiers, or remote accounts, there is no personal data to access, rectify, port, or erase under GDPR, CCPA/CPRA, or KVKK.</p>
+        <p>You can reset your local progress at any time directly through <strong>Settings &rarr; Reset Progress</strong> within the app, or by deleting the app from your iOS/iPadOS device.</p>
+      </div>
+
+      <div class="legal-section">
+        <h2><span class="section-num">8</span>Changes</h2>
+        <p>If this policy is revised, the updated text will be published with a new date. If any feature requiring data collection is ever introduced, explicit consent will be requested and the policy will be updated before such build goes live.</p>
+      </div>
+
+      <div class="legal-section">
+        <h2><span class="section-num">9</span>Contact</h2>
+        <ul class="contact-detail-list">
+          <li>
+            <span class="label">Official Support Email</span>
+            <span class="value"><a href="mailto:contact@articgamestudio.com" class="legal-link">contact@articgamestudio.com</a></span>
+          </li>
+          <li>
+            <span class="label">Studio</span>
+            <span class="value">Artic Game Studio &mdash; &Uuml;sk&uuml;dar, Istanbul, T&uuml;rkiye</span>
+          </li>
+          <li>
+            <span class="label">Developer</span>
+            <span class="value">Hamza M&uuml;cahit &Ccedil;alt&#305;l&#305;</span>
+          </li>
+        </ul>
+      </div>
+
+    </div>
+
+    <!-- ===== PRIVACY POLICY — TÜRKÇE ===== -->
+    <div class="lang-divider" id="privacy-policy-tr"><span>&#127481;&#127479; Türkçe / Turkish</span></div>
+
+    <div class="kvkk-badge">KVKK &amp; Türkiye</div>
+    <div style="margin-bottom:2rem;">
+      <h2 style="font-family:var(--font-display);font-size:clamp(1.5rem,4vw,2.2rem);font-weight:800;letter-spacing:-0.02em;margin-bottom:0.5rem;">Gizlilik <span class="gradient-text">Politikası</span></h2>
+      <p style="color:var(--text-muted);font-size:0.88rem;">Son güncelleme: 21 Eylül 2026 &nbsp;&middot;&nbsp; Geliştirici: Artic Game Studio (Hamza Mücahit Çaltılı)</p>
+    </div>
+
+    <div class="app-id-block" style="border-color:rgba(220,38,38,0.2);background:rgba(220,38,38,0.04);">
+      Bu Gizlilik Politikası, <strong>Artic Game Studio</strong> tarafından Apple App Store'da yayımlanan <strong>Frame Agent</strong> (<code>com.articgamestudio.frameagent</code>) mobil uygulamasına aittir.
+    </div>
+
+    <div class="tr-intro-block">
+      <strong>Frame Agent hiçbir kişisel veriyi toplamaz, saklamaz, izlemez veya üçüncü taraflarla paylaşmaz.</strong>
+      <br /><br />
+      Oyun tamamen cihazınızda yerel olarak çalışır. İnternet bağlantısı, üyelik/hesap kaydı gerektirmez; reklam barındırmaz, harici SDK içermez ve hiçbir uzak sunucuya veri iletmez.
+    </div>
+
+    <div class="legal-body" style="margin-top:0;">
+
+      <div class="legal-section">
+        <h2><span class="section-num">1</span>Toplanmayan Veriler</h2>
+        <p>Bu uygulama aşağıdaki verilerin <strong>hiçbirini</strong> toplamaz:</p>
+        <ul>
+          <li>İsim, e-posta, telefon veya kişisel kimlik verileri</li>
+          <li>Konum verisi (kesin veya yaklaşık)</li>
+          <li>Cihaz tanımlayıcıları, IDFA (Reklamveren Kimliği) veya IDFV</li>
+          <li>Rehber, fotoğraflar, kamera veya mikrofon erişimi</li>
+          <li>Kullanım analitiği, kilitlenme tanılaması veya davranışsal takip verisi</li>
+          <li>IP adresi veya ağ bağlantı kayıtları</li>
+        </ul>
+        <p style="margin-top:0.75rem;">Uygulama sistem düzeyinde <strong>hiçbir cihaz izni</strong> talep etmez ve sizi diğer uygulama veya web sitelerinde takip etmez.</p>
+      </div>
+
+      <div class="legal-section">
+        <h2><span class="section-num">2</span>Cihazınızda Yerel Olarak Saklanan Bilgiler</h2>
+        <p>Oyun durumunu sürdürebilmek adına aşağıdaki bilgiler <strong>yalnızca cihazınızın korumalı yerel alanında</strong> tutulur:</p>
+        <ul>
+          <li>Mevcut seviye ve tamamlanan sanat tabloları</li>
+          <li>Oyun içi altın ve güçlendirici miktarları</li>
+          <li>Ses, titreşim ve dil tercihleri</li>
+          <li>Bilgi yarışması skorları</li>
+        </ul>
+        <p style="margin-top:0.75rem;">Bu veriler cihazınızı <strong>hiçbir koşulda terk etmez</strong>. Bize, Apple'a ya da herhangi bir üçüncü tarafa aktarılmaz. Uygulamayı cihazınızdan sildiğinizde tamamen yok edilir.</p>
+      </div>
+
+      <div class="legal-section">
+        <h2><span class="section-num">3</span>Üçüncü Taraf Hizmetler ve Analitik</h2>
+        <p>Uygulama içerisinde <strong>hiçbir üçüncü taraf yazılım kiti (SDK)</strong>, analitik aracı, reklam çerçevesi veya takip kütüphanesi bulunmamaktadır.</p>
+        <p>Frame Agent tek seferlik satın alımla sunulur. Satın alma işlemi bütünüyle Apple App Store altyapısı üzerinden yürütülür; geliştirici olarak ödeme, kredi kartı veya fatura bilgilerinize erişimimiz bulunmaz.</p>
+      </div>
+
+      <div class="legal-section">
+        <h2><span class="section-num">4</span>Cihaz Donanım Özellikleri</h2>
+        <p>Uygulama yerel olarak yalnızca şu donanımsal özellikleri kullanır:</p>
+        <ul>
+          <li><strong>Titreşim (Taptic Engine)</strong> &mdash; Bulmaca dokunuşlarında geri bildirim sağlamak için yerel olarak tetiklenir. Ayarlar menüsünden kapatılabilir. Veri toplamaz.</li>
+          <li><strong>Paylaşım Menüsü</strong> &mdash; Yalnızca kullanıcı paylaşım düğmesine bastığında iOS'in yerel paylaşım penceresini açar. Seçilen içerik veya kanal uygulama tarafından kaydedilmez veya iletilmez.</li>
+        </ul>
+      </div>
+
+      <div class="legal-section">
+        <h2><span class="section-num">5</span>Çocukların Gizliliği</h2>
+        <p>Frame Agent hiçbir kullanıcıdan veri toplamadığı için çocuk kullanıcılardan da hiçbir veri elde etmez. 6698 sayılı KVKK, GDPR ve COPPA uyumluluğu doğrultusunda 13 yaş altındaki bireylerden bilerek ya da bilmeyerek hiçbir bilgi edinilmez; Apple App Store Çocuk ve Aile standartlarına bütünüyle uygundur.</p>
+      </div>
+
+      <div class="legal-section">
+        <h2><span class="section-num">6</span>App Store Gizlilik Etiketi (App Privacy Details)</h2>
+        <p>Apple App Store Connect gizlilik beyanında:</p>
+        <table class="nutrition-table">
+          <thead>
+            <tr><th>Kategori</th><th>Durum</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Sizi Takip Etmek İçin Kullanılan Veriler</td><td>Yok (None)</td></tr>
+            <tr><td>Sizinle İlişkilendirilen Veriler</td><td>Yok (None)</td></tr>
+            <tr><td>Sizinle İlişkilendirilmeyen Veriler</td><td>Yok (None)</td></tr>
+          </tbody>
+        </table>
+        <p style="margin-top:0.75rem;">Frame Agent, App Store ürün sayfasında <strong>"Veri Toplanmaz"</strong> (Data Not Collected) rozetini doğrudan karşılamaktadır.</p>
+      </div>
+
+      <div class="legal-section">
+        <h2><span class="section-num">7</span>Haklarınız ve KVKK</h2>
+        <p>Kişisel veri toplanmadığı ve uzaktan işlenmediği için; 6698 sayılı KVKK ve GDPR kapsamında yer alan veri erişimi, düzeltme, silme veya taşınabilirlik talepleri saklanan veri bulunmadığından fiilen uygulanamaz.</p>
+        <p>Cihazınızda yerel olarak saklanan oyun kaydını oyun içi <strong>Ayarlar &rarr; İlerlemeyi Sıfırla</strong> yolunu kullanarak veya uygulamayı iOS/iPadOS cihazınızdan kaldırarak anında temizleyebilirsiniz.</p>
+      </div>
+
+      <div class="legal-section">
+        <h2><span class="section-num">8</span>Değişiklikler</h2>
+        <p>Bu politikada güncelleme yapılması halinde güncel sürüm yeni tarihle yayımlanır. Gelecekte veri toplama gerektiren bir özellik eklenmesi durumunda, güncelleme öncesinde açık bilgilendirme ve onay süreci işletilecektir.</p>
+      </div>
+
+      <div class="legal-section">
+        <h2><span class="section-num">9</span>İletişim</h2>
+        <ul class="contact-detail-list">
+          <li>
+            <span class="label">Resmi Destek E-postası</span>
+            <span class="value"><a href="mailto:contact@articgamestudio.com" class="legal-link">contact@articgamestudio.com</a></span>
+          </li>
+          <li>
+            <span class="label">Stüdyo</span>
+            <span class="value">Artic Game Studio &mdash; Üsküdar, İstanbul, Türkiye</span>
+          </li>
+          <li>
+            <span class="label">Geliştirici</span>
+            <span class="value">Hamza Mücahit Çaltılı</span>
+          </li>
+        </ul>
+      </div>
+
+    </div>
+
+  </div>
+</main>
+
+<footer class="footer" role="contentinfo">
+  <div class="container">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <img src="logo.svg" alt="" class="footer-logo-img" aria-hidden="true" />
+        <span>&copy; 2026 Artic Game Studio. All rights reserved.</span>
+      </div>
+      <div class="footer-links">
+        <a href="privacy.html" id="appstore-footer-privacy">Privacy Policy</a>
+        <a href="terms.html" id="appstore-footer-terms">Terms of Service</a>
+        <a href="index.html#contact" id="appstore-footer-contact">Contact</a>
+      </div>
+    </div>
+  </div>
+</footer>
+</body>
+</html>
