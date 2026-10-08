@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Download Frame Agent — Hidden Objects on Google Play and App Store. Available on Android and iOS." />
+  <title>Download Frame Agent — Artic Game Studio</title>
+  <link rel="icon" type="image/svg+xml" href="logo.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+  <style>
+    .stores-page {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 7rem 1.5rem 4rem;
+    }
+    .stores-inner {
+      text-align: center;
+      max-width: 640px;
+      width: 100%;
+    }
+    .stores-eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      background: rgba(124, 58, 237, 0.12);
+      border: 1px solid rgba(124, 58, 237, 0.28);
+      border-radius: 999px;
+      padding: 0.35rem 1rem;
+      font-size: 0.78rem;
+      font-weight: 700;
+      color: var(--purple-400);
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      margin-bottom: 1.25rem;
+    }
+    .stores-inner h1 {
+      font-family: var(--font-display);
+      font-size: clamp(2rem, 6vw, 3.2rem);
+      font-weight: 900;
+      letter-spacing: -0.03em;
+      line-height: 1.1;
+      margin-bottom: 0.75rem;
+    }
+    .stores-inner p.sub {
+      color: var(--text-muted);
+      font-size: 1rem;
+      line-height: 1.6;
+      margin-bottom: 3rem;
+    }
+    /* Desktop: side-by-side */
+    .store-badges {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+      gap: 2rem;
+      flex-wrap: wrap;
+    }
+    .store-badge-link {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0.75rem;
+      text-decoration: none;
+      border-radius: 20px;
+      padding: 1.5rem 1.75rem;
+      background: rgba(255, 255, 255, 0.04);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      transition: transform 0.25s ease, background 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
+      cursor: pointer;
+    }
+    .store-badge-link:hover {
+      transform: translateY(-6px) scale(1.03);
+      background: rgba(255, 255, 255, 0.08);
+      border-color: rgba(124, 58, 237, 0.4);
+      box-shadow: 0 20px 60px rgba(124, 58, 237, 0.18), 0 4px 20px rgba(0, 0, 0, 0.3);
+    }
+    .store-badge-link:active {
+      transform: translateY(-2px) scale(0.99);
+    }
+    .store-badge-link img {
+      width: 100px;
+      height: 100px;
+      object-fit: contain;
+      border-radius: 16px;
+      display: block;
+      filter: drop-shadow(0 4px 16px rgba(0, 0, 0, 0.25));
+      transition: filter 0.25s ease;
+    }
+    .store-badge-link:hover img {
+      filter: drop-shadow(0 8px 24px rgba(0, 0, 0, 0.4));
+    }
+    .store-badge-label {
+      font-size: 0.85rem;
+      font-weight: 700;
+      color: var(--text-secondary);
+      letter-spacing: 0.02em;
+      transition: color 0.25s ease;
+    }
+    .store-badge-link:hover .store-badge-label {
+      color: var(--text-primary);
+    }
+    /* Mobile: stack vertically */
+    @media (max-width: 560px) {
+      .store-badges {
+        flex-direction: column;
+        gap: 1.25rem;
+      }
+      .store-badge-link {
+        width: 100%;
+        max-width: 260px;
+        flex-direction: row;
+        justify-content: center;
+        gap: 1rem;
+        padding: 1.1rem 1.5rem;
+      }
+      .store-badge-link img {
+        width: 56px;
+        height: 56px;
+      }
+      .store-badge-label {
+        font-size: 1rem;
+      }
+    }
+  </style>
+</head>
+<body class="loaded">
+<div class="noise-overlay" aria-hidden="true"></div>
+
+<nav class="nav scrolled" role="navigation" aria-label="Main navigation">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo" aria-label="Artic Game Studio">
+      <img src="logo.svg" alt="Artic Game Studio Logo" class="nav-logo-img" />
+      <span class="nav-logo-text">Artic Game Studio</span>
+    </a>
+    <div class="nav-center">
+      <a href="privacy.html" class="nav-link" id="nav-priv">Privacy Policy</a>
+      <a href="terms.html" class="nav-link" id="nav-terms">Terms of Service</a>
+      <a href="index.html#contact" class="nav-link" id="nav-contact">Contact</a>
+    </div>
+  </div>
+</nav>
+
+<main class="stores-page">
+  <div class="stores-inner">
+    <div class="stores-eyebrow">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+        <path d="M21.58 16.09l-1.09-7.66C20.21 6.46 18.52 5 16.53 5H7.47C5.48 5 3.79 6.46 3.51 8.43l-1.09 7.66C2.2 17.63 3.39 19 4.94 19c.68 0 1.32-.27 1.8-.75L9 16h6l2.25 2.25c.48.48 1.13.75 1.8.75 1.56 0 2.75-1.37 2.53-2.91zM11 11H9v2H8v-2H6v-1h2V8h1v2h2v1zm4 1c-.55 0-1-.45-1-1s.45-1 1-1 1 .45 1 1-.45 1-1 1zm2-3c-.55 0-1-.45-1-1s.45-1 1-1 1 .45 1 1-.45 1-1 1z"/>
+      </svg>
+      Frame Agent &mdash; Hidden Objects
+    </div>
+
+    <h1>Download on <span class="gradient-text">Your Platform</span></h1>
+    <p class="sub">Available on both Google Play and App Store. Pick your platform and start playing.</p>
+
+    <div class="store-badges">
+      <!-- Google Play -->
+      <a
+        id="store-googleplay"
+        class="store-badge-link"
+        href="https://play.google.com/store/apps/details?id=com.articgamestudio.frameagent"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="Get Frame Agent on Google Play"
+      >
+        <img src="images/googleplay-badge.jpg" alt="Google Play" />
+        <span class="store-badge-label">Google Play</span>
+      </a>
+
+      <!-- App Store -->
+      <a
+        id="store-appstore"
+        class="store-badge-link"
+        href="https://apps.apple.com/app/frame-agent-hidden-objects/id6814467983"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="Get Frame Agent on App Store"
+      >
+        <img src="images/appstore-badge.png" alt="App Store" />
+        <span class="store-badge-label">App Store</span>
+      </a>
+    </div>
+  </div>
+</main>
+
+<footer class="footer" role="contentinfo">
+  <div class="container">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <img src="logo.svg" alt="" class="footer-logo-img" aria-hidden="true" />
+        <span>&copy; 2026 Artic Game Studio. All rights reserved.</span>
+      </div>
+      <div class="footer-links">
+        <a href="privacy.html" id="fas-footer-privacy">Privacy Policy</a>
+        <a href="terms.html" id="fas-footer-terms">Terms of Service</a>
+        <a href="index.html#contact" id="fas-footer-contact">Contact</a>
+      </div>
+    </div>
+  </div>
+</footer>
+</body>
+</html>
