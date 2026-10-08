@@ -2,147 +2,224 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
-  <meta name="description" content="Artic Game Studio — Mobile gaming studio. Get in touch with us." />
-  <meta name="theme-color" content="#0a0a0f" />
-  <title>Artic Game Studio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Download Frame Agent — Hidden Objects on Google Play and App Store. Available on Android and iOS." />
+  <title>Download Frame Agent — Artic Game Studio</title>
   <link rel="icon" type="image/svg+xml" href="logo.svg" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="styles.css" />
+  <style>
+    .stores-page {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 7rem 1.5rem 4rem;
+    }
+    .stores-inner {
+      text-align: center;
+      max-width: 640px;
+      width: 100%;
+    }
+    .stores-eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      background: rgba(124, 58, 237, 0.12);
+      border: 1px solid rgba(124, 58, 237, 0.28);
+      border-radius: 999px;
+      padding: 0.35rem 1rem;
+      font-size: 0.78rem;
+      font-weight: 700;
+      color: var(--purple-400);
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      margin-bottom: 1.25rem;
+    }
+    .stores-inner h1 {
+      font-family: var(--font-display);
+      font-size: clamp(2rem, 6vw, 3.2rem);
+      font-weight: 900;
+      letter-spacing: -0.03em;
+      line-height: 1.1;
+      margin-bottom: 0.75rem;
+    }
+    .stores-inner p.sub {
+      color: var(--text-muted);
+      font-size: 1rem;
+      line-height: 1.6;
+      margin-bottom: 3rem;
+    }
+    /* Desktop: side-by-side */
+    .store-badges {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+      gap: 2rem;
+      flex-wrap: wrap;
+    }
+    .store-badge-link {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0.75rem;
+      text-decoration: none;
+      border-radius: 20px;
+      padding: 1.5rem 1.75rem;
+      background: rgba(255, 255, 255, 0.04);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      transition: transform 0.25s ease, background 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
+      cursor: pointer;
+    }
+    .store-badge-link:hover {
+      transform: translateY(-6px) scale(1.03);
+      background: rgba(255, 255, 255, 0.08);
+      border-color: rgba(124, 58, 237, 0.4);
+      box-shadow: 0 20px 60px rgba(124, 58, 237, 0.18), 0 4px 20px rgba(0, 0, 0, 0.3);
+    }
+    .store-badge-link:active {
+      transform: translateY(-2px) scale(0.99);
+    }
+    .store-badge-link img {
+      width: 100px;
+      height: 100px;
+      object-fit: contain;
+      border-radius: 16px;
+      display: block;
+      filter: drop-shadow(0 4px 16px rgba(0, 0, 0, 0.25));
+      transition: filter 0.25s ease;
+    }
+    .store-badge-link:hover img {
+      filter: drop-shadow(0 8px 24px rgba(0, 0, 0, 0.4));
+    }
+    .store-badge-label {
+      font-size: 0.85rem;
+      font-weight: 700;
+      color: var(--text-secondary);
+      letter-spacing: 0.02em;
+      transition: color 0.25s ease;
+    }
+    .store-badge-link:hover .store-badge-label {
+      color: var(--text-primary);
+    }
+    /* Game icon header */
+    .game-icon-wrap {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 1rem;
+      margin-bottom: 1.5rem;
+    }
+    .game-icon {
+      width: 110px;
+      height: 110px;
+      border-radius: 24px;
+      object-fit: cover;
+      box-shadow: 0 8px 32px rgba(0,0,0,0.45), 0 2px 8px rgba(0,0,0,0.3);
+    }
+    .game-icon-title {
+      font-family: var(--font-display);
+      font-size: 1rem;
+      font-weight: 800;
+      color: var(--text-secondary);
+      letter-spacing: 0.01em;
+    }
+    /* Mobile: stack vertically */
+    @media (max-width: 560px) {
+      .store-badges {
+        flex-direction: column;
+        gap: 1.25rem;
+      }
+      .store-badge-link {
+        width: 100%;
+        max-width: 260px;
+        flex-direction: row;
+        justify-content: center;
+        gap: 1rem;
+        padding: 1.1rem 1.5rem;
+      }
+      .store-badge-link img {
+        width: 56px;
+        height: 56px;
+      }
+      .store-badge-label {
+        font-size: 1rem;
+      }
+    }
+  </style>
 </head>
-<body>
-
+<body class="loaded">
 <div class="noise-overlay" aria-hidden="true"></div>
-<div class="custom-cursor" id="cursor" aria-hidden="true"></div>
-<div class="custom-cursor-follower" id="cursorFollower" aria-hidden="true"></div>
 
-<!-- NAV -->
-<nav class="nav" id="nav" role="navigation" aria-label="Main navigation">
+<nav class="nav scrolled" role="navigation" aria-label="Main navigation">
   <div class="nav-inner">
-    <a href="#" class="nav-logo" aria-label="Artic Game Studio">
+    <a href="index.html" class="nav-logo" aria-label="Artic Game Studio">
       <img src="logo.svg" alt="Artic Game Studio Logo" class="nav-logo-img" />
       <span class="nav-logo-text">Artic Game Studio</span>
     </a>
     <div class="nav-center">
-      <a href="privacy.html" class="nav-link" id="nav-privacy-link">Privacy Policy</a>
-      <a href="terms.html" class="nav-link" id="nav-terms-link">Terms of Service</a>
-      <a href="#contact" class="nav-link" id="nav-contact-link">Contact</a>
+      <a href="privacy.html" class="nav-link" id="nav-priv">Privacy Policy</a>
+      <a href="terms.html" class="nav-link" id="nav-terms">Terms of Service</a>
+      <a href="index.html#contact" class="nav-link" id="nav-contact">Contact</a>
     </div>
   </div>
 </nav>
 
-<!-- HERO -->
-<section class="hero" id="hero" aria-label="Hero">
-  <div class="hero-bg" aria-hidden="true">
-    <div class="orb orb-1"></div>
-    <div class="orb orb-2"></div>
-    <div class="grid-lines"></div>
-  </div>
-  <div class="hero-content hero-content--center">
-
-    <div class="hero-simple" id="hero-simple">
-      <img src="images/frameagent-icon.jpg" alt="Frame Agent: Hidden Objects" class="hero-simple-icon" />
-      <h1 class="hero-simple-title">Frame Agent: <span class="gradient-text">Hidden Objects</span></h1>
-      <div class="hero-simple-badges">
-        <a href="frameagentstores.html" id="hs-googleplay" class="hero-simple-badge" aria-label="Get it on Google Play">
-          <img src="images/googleplay-badge.jpg" alt="Get it on Google Play" />
-        </a>
-        <a href="frameagentstores.html" id="hs-appstore" class="hero-simple-badge" aria-label="Download on the App Store">
-          <img src="images/appstore-badge.png" alt="Download on the App Store" />
-        </a>
-      </div>
+<main class="stores-page">
+  <div class="stores-inner">
+    <div class="game-icon-wrap">
+      <img src="images/frameagent-icon.jpg" alt="Frame Agent: Hidden Objects" class="game-icon" />
+      <span class="game-icon-title">Frame Agent: Hidden Objects</span>
     </div>
 
-  </div>
-</section>
+    <h1>Download on <span class="gradient-text">Your Platform</span></h1>
+    <div class="store-badges">
+      <!-- Google Play -->
+      <a
+        id="store-googleplay"
+        class="store-badge-link"
+        href="https://play.google.com/store/apps/details?id=com.articgamestudio.frameagent"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="Get Frame Agent on Google Play"
+      >
+        <img src="images/googleplay-badge.jpg" alt="Google Play" />
+        <span class="store-badge-label">Google Play</span>
+      </a>
 
-
-<!-- CONTACT -->
-<section class="contact-section" id="contact" aria-label="Contact">
-  <div class="container">
-    <div class="contact-glass reveal">
-      <div class="contact-left">
-        <div class="section-tag">Get in Touch</div>
-        <h2 class="section-title">Say <span class="gradient-text">Hello</span></h2>
-        <p class="contact-desc">
-          Whether you're interested in partnerships, press, or just want to say hi — we'd love to hear from you.
-        </p>
-        <div class="contact-info">
-          <a class="contact-item" href="mailto:contact@articgamestudio.com" id="contact-email">
-            <span class="contact-icon" aria-hidden="true">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><rect x="2" y="4" width="20" height="16" rx="3" stroke="currentColor" stroke-width="1.5"/><path d="M2 8l10 6 10-6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
-            </span>
-            contact@articgamestudio.com
-          </a>
-
-        </div>
-        <div class="social-links">
-          <a href="#" class="social-btn" id="social-twitter" aria-label="X / Twitter">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
-          </a>
-          <a href="#" class="social-btn" id="social-instagram" aria-label="Instagram">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
-          </a>
-          <a href="#" class="social-btn" id="social-linkedin" aria-label="LinkedIn">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M6.5 8a1.5 1.5 0 100-3 1.5 1.5 0 000 3zM5 10h3v9H5v-9zm5.5 0H13v1.3c.4-.7 1.4-1.5 3-1.5 3.2 0 3.5 2.1 3.5 4.8V19h-3v-4c0-1-.4-2.5-2-2.5-1.8 0-2 1.4-2 2.4V19h-3v-9z"/></svg>
-          </a>
-        </div>
-      </div>
-
-      <form class="contact-form" id="contactForm" novalidate>
-        <div class="form-group">
-          <label for="form-name">Name</label>
-          <input type="text" id="form-name" name="name" placeholder="Your name" autocomplete="name" required />
-        </div>
-        <div class="form-group">
-          <label for="form-email">Email</label>
-          <input type="email" id="form-email" name="email" placeholder="your@email.com" autocomplete="email" required />
-        </div>
-        <div class="form-group">
-          <label for="form-subject">Subject</label>
-          <select id="form-subject" name="subject" required>
-            <option value="">Select a topic</option>
-            <option value="partnership">Partnership</option>
-            <option value="press">Press & Media</option>
-            <option value="careers">Careers</option>
-            <option value="other">Other</option>
-          </select>
-        </div>
-        <div class="form-group">
-          <label for="form-message">Message</label>
-          <textarea id="form-message" name="message" rows="4" placeholder="Your message..." required></textarea>
-        </div>
-        <button type="submit" class="btn-primary form-submit" id="form-submit-btn">
-          <span>Send Message</span>
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M22 2L11 13M22 2L15 22l-4-9-9-4 20-7z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-        </button>
-        <div class="form-success" id="formSuccess" aria-live="polite" role="status">
-          ✅ Message sent! We'll get back to you shortly.
-        </div>
-      </form>
+      <!-- App Store -->
+      <a
+        id="store-appstore"
+        class="store-badge-link"
+        href="https://apps.apple.com/app/frame-agent-hidden-objects/id6814467983"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="Get Frame Agent on App Store"
+      >
+        <img src="images/appstore-badge.png" alt="App Store" />
+        <span class="store-badge-label">App Store</span>
+      </a>
     </div>
   </div>
-</section>
+</main>
 
-<!-- FOOTER -->
 <footer class="footer" role="contentinfo">
   <div class="container">
     <div class="footer-inner">
       <div class="footer-brand">
         <img src="logo.svg" alt="" class="footer-logo-img" aria-hidden="true" />
-        <span>© 2026 Artic Game Studio. All rights reserved.</span>
+        <span>&copy; 2026 Artic Game Studio. All rights reserved.</span>
       </div>
       <div class="footer-links">
-        <a href="privacy.html" id="footer-privacy">Privacy Policy</a>
-        <a href="terms.html" id="footer-terms">Terms of Service</a>
-        <a href="#contact" id="footer-contact">Contact</a>
+        <a href="privacy.html" id="fas-footer-privacy">Privacy Policy</a>
+        <a href="terms.html" id="fas-footer-terms">Terms of Service</a>
+        <a href="index.html#contact" id="fas-footer-contact">Contact</a>
       </div>
     </div>
   </div>
 </footer>
-
-<script src="app.js"></script>
 </body>
 </html>
